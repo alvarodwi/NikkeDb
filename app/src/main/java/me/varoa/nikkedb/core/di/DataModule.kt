@@ -16,7 +16,7 @@ import me.varoa.nikkedb.core.data.local.AppDatabase
 import me.varoa.nikkedb.core.data.remote.NoConnectionInterceptor
 import me.varoa.nikkedb.core.data.remote.api.NikkeApiService
 import me.varoa.nikkedb.utils.Constants
-import me.varoa.sad.core.data.prefs.DataStoreManager
+import me.varoa.nikkedb.core.data.prefs.DataStoreManager
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

@@ -7,6 +7,7 @@ import kotlinx.serialization.Serializable
 data class NikkeJson(
     val id: String,
     val name: String,
+    val url: String,
     val rarity: String,
     @SerialName("class") val classType: String,
     val weapon: String,

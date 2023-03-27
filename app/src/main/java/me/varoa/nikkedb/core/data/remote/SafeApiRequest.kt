@@ -15,7 +15,6 @@ open class SafeApiRequest {
     ): T {
         val response = call.invoke()
         if (response.isSuccessful) {
-            logcat { "Response is " + response.body().toString() }
             return response.body()!!
         } else {
             val error = response.errorBody()?.string()

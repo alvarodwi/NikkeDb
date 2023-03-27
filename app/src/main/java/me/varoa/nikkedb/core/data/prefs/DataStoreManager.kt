@@ -1,11 +1,10 @@
-package me.varoa.sad.core.data.prefs
+package me.varoa.nikkedb.core.data.prefs
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.map
-import me.varoa.nikkedb.core.data.prefs.Keys
-import me.varoa.nikkedb.core.domain.model.AppTheme
+import me.varoa.nikkedb.core.domain.model.Theme
 
 private val Context.dataStore by preferencesDataStore("prefs")
 
@@ -17,10 +16,10 @@ class DataStoreManager(
     // theme
     val theme
         get() = prefsDataStore.data.map { prefs ->
-            prefs[Keys.THEME_KEY] ?: AppTheme.DARK.name
+            prefs[Keys.THEME_KEY] ?: Theme.DARK.name
         }
 
-    suspend fun setTheme(flag: AppTheme) {
+    suspend fun setTheme(flag: Theme) {
         prefsDataStore.edit { prefs -> prefs[Keys.THEME_KEY] = flag.name }
     }
 }

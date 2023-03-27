@@ -25,8 +25,8 @@ android {
     getByName("release") {
       isMinifyEnabled = true
       proguardFiles(
-          getDefaultProguardFile("proguard-android.txt"),
-          "proguard-rules.pro"
+        getDefaultProguardFile("proguard-android.txt"),
+        "proguard-rules.pro"
       )
     }
   }
@@ -40,9 +40,9 @@ android {
   kotlinOptions {
     jvmTarget = "11"
     freeCompilerArgs = freeCompilerArgs + listOf(
-        "-opt-in=kotlin.ExperimentalStdlibApi",
-        "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-        "-opt-in=kotlin.RequiresOptIn"
+      "-opt-in=kotlin.ExperimentalStdlibApi",
+      "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+      "-opt-in=kotlin.RequiresOptIn"
     )
   }
 
@@ -53,9 +53,8 @@ android {
     kotlinCompilerExtensionVersion = "1.4.4"
   }
   packagingOptions {
-    resources {
-      excludes += "/META-INF/{AL2.0,LGPL2.1}"
-    }
+    resources.excludes.add("/META-INF/AL2.0")
+    resources.excludes.add("/META-INF/LGPL2.1")
   }
 }
 
@@ -88,12 +87,15 @@ dependencies {
   // compose
   implementation("androidx.compose.ui:ui")
   implementation("androidx.compose.ui:ui-tooling-preview")
-  implementation("androidx.compose.material3:material3:1.0.1")
-  implementation("androidx.compose.material3:material3-window-size-class:1.0.1")
+  implementation("androidx.compose.material3:material3:1.1.0-beta01")
+  implementation("androidx.compose.material3:material3-window-size-class:1.1.0-beta01")
+  implementation("com.google.accompanist:accompanist-systemuicontroller:0.30.0")
+  implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
   // di
   implementation("com.google.dagger:hilt-android:2.45")
   kapt("com.google.dagger:hilt-android-compiler:2.45")
+  implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
   // data
   implementation("androidx.room:room-runtime:2.5.1")

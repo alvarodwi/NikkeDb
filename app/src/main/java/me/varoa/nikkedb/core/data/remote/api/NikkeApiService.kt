@@ -9,7 +9,7 @@ interface NikkeApiService {
     @GET("characters")
     suspend fun getCharacters(): Response<List<NikkeJson>>
 
-    @GET("characters/:name")
+    @GET("characters/{name}")
     suspend fun getCharacter(
         @Path("name") name: String
     ): Response<NikkeJson>
