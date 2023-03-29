@@ -7,8 +7,8 @@ import logcat.LogPriority.VERBOSE
 
 @HiltAndroidApp
 class App : Application() {
-  override fun onCreate() {
-    super.onCreate()
-    AndroidLogcatLogger.installOnDebuggableApp(this, minPriority = VERBOSE)
-  }
+    override fun onCreate() {
+        super.onCreate()
+        AndroidLogcatLogger.installOnDebuggableApp(this, minPriority = VERBOSE)
+    }
 }

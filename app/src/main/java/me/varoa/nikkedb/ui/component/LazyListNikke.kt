@@ -14,33 +14,33 @@ import me.varoa.nikkedb.core.domain.model.Nikke
 
 @Composable
 fun LazyListNikke(
-  data: List<Nikke>,
-  navigateToDetail: (String) -> Unit,
-  modifier: Modifier = Modifier,
+    data: List<Nikke>,
+    navigateToDetail: (String) -> Unit,
+    modifier: Modifier = Modifier
 ) {
-  if (data.isEmpty()) {
-    ErrorLayout(
-      emoji = "🤌",
-      message = "There is nothing here",
-      shouldShowRetry = false,
-      onRetry = {},
-    )
-  } else {
-    LazyVerticalGrid(
-      columns = Adaptive(160.dp),
-      contentPadding = PaddingValues(16.dp),
-      horizontalArrangement = Arrangement.spacedBy(16.dp),
-      verticalArrangement = Arrangement.spacedBy(16.dp),
-      modifier = modifier.semantics{
-        contentDescription = "List Nikke"
-      }
-    ) {
-      items(data) { data ->
-        NikkeItem(
-          nikke = data,
-          navigateToDetail = navigateToDetail
+    if (data.isEmpty()) {
+        ErrorLayout(
+            emoji = "🤌",
+            message = "There is nothing here",
+            shouldShowRetry = false,
+            onRetry = {}
         )
-      }
+    } else {
+        LazyVerticalGrid(
+            columns = Adaptive(160.dp),
+            contentPadding = PaddingValues(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            modifier = modifier.semantics {
+                contentDescription = "List Nikke"
+            }
+        ) {
+            items(data) { data ->
+                NikkeItem(
+                    nikke = data,
+                    navigateToDetail = navigateToDetail
+                )
+            }
+        }
     }
-  }
 }

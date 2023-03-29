@@ -12,9 +12,9 @@ import me.varoa.nikkedb.core.domain.repository.NikkeRepository
 @Module
 @InstallIn(ViewModelComponent::class)
 interface DomainModule {
-  @Binds
-  fun nikkeRepository(repo: NikkeRepositoryImpl): NikkeRepository
+    @Binds
+    fun nikkeRepository(repo: NikkeRepositoryImpl): NikkeRepository
 
-  @Binds
-  fun favoriteRepository(repo: FavoriteRepositoryImpl): FavoriteRepository
+    @Binds
+    fun favoriteRepository(repo: FavoriteRepositoryImpl): FavoriteRepository
 }

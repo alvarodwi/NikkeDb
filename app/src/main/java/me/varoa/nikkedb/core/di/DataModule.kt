@@ -13,10 +13,10 @@ import kotlinx.serialization.json.Json
 import logcat.logcat
 import me.varoa.nikkedb.BuildConfig
 import me.varoa.nikkedb.core.data.local.AppDatabase
-import me.varoa.nikkedb.core.data.remote.NoConnectionInterceptor
-import me.varoa.nikkedb.core.data.remote.api.NikkeApiService
-import me.varoa.nikkedb.core.data.remote.api.ApiConfig
 import me.varoa.nikkedb.core.data.prefs.DataStoreManager
+import me.varoa.nikkedb.core.data.remote.NoConnectionInterceptor
+import me.varoa.nikkedb.core.data.remote.api.ApiConfig
+import me.varoa.nikkedb.core.data.remote.api.NikkeApiService
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

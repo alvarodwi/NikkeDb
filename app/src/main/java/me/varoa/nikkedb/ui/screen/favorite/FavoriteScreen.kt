@@ -21,53 +21,52 @@ import me.varoa.nikkedb.ui.component.LoadingLayout
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FavoriteScreen(
-  modifier: Modifier = Modifier,
-  viewModel: FavoriteViewModel,
-  navigateToDetail: (String) -> Unit,
-  navigateBack: () -> Unit,
+    modifier: Modifier = Modifier,
+    viewModel: FavoriteViewModel,
+    navigateToDetail: (String) -> Unit,
+    navigateBack: () -> Unit
 ) {
-  val uiState by viewModel.uiState.collectAsState(UiState.Loading)
+    val uiState by viewModel.uiState.collectAsState(UiState.Loading)
 
-  Scaffold(
-    topBar =
-    {
-      TopAppBar(
-        title = { Text("Favorite NIKKE") },
-        navigationIcon = {
-          IconButton(onClick = navigateBack) {
-            Icon(
-              painter = painterResource(drawable.ic_arrow_left),
-              contentDescription = null
+    Scaffold(
+        topBar =
+        {
+            TopAppBar(
+                title = { Text("Favorite NIKKE") },
+                navigationIcon = {
+                    IconButton(onClick = navigateBack) {
+                        Icon(
+                            painter = painterResource(drawable.ic_arrow_left),
+                            contentDescription = null
+                        )
+                    }
+                }
             )
-          }
-        },
-      )
+        }
+    ) { innerPadding ->
+        uiState.let { state ->
+            when (state) {
+                is UiState.Loading -> {
+                    LoadingLayout(
+                        modifier = Modifier.padding(innerPadding)
+                    )
+                }
+                is UiState.Success -> {
+                    LazyListNikke(
+                        data = state.data,
+                        navigateToDetail = navigateToDetail,
+                        modifier = Modifier.padding(innerPadding)
+                    )
+                }
+                is UiState.Error -> {
+                    ErrorLayout(
+                        emoji = "🙏",
+                        message = state.errorMessage,
+                        onRetry = { viewModel.fetchFavorites() },
+                        modifier = Modifier.padding(innerPadding)
+                    )
+                }
+            }
+        }
     }
-  )
-  { innerPadding ->
-    uiState.let { state ->
-      when (state) {
-        is UiState.Loading -> {
-          LoadingLayout(
-            modifier = Modifier.padding(innerPadding)
-          )
-        }
-        is UiState.Success -> {
-          LazyListNikke(
-            data = state.data,
-            navigateToDetail = navigateToDetail,
-            modifier = Modifier.padding(innerPadding)
-          )
-        }
-        is UiState.Error -> {
-          ErrorLayout(
-            emoji = "🙏",
-            message = state.errorMessage,
-            onRetry = { viewModel.fetchFavorites() },
-            modifier = Modifier.padding(innerPadding),
-          )
-        }
-      }
-    }
-  }
 }

@@ -29,124 +29,124 @@ import org.junit.runners.MethodSorters
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @RunWith(AndroidJUnit4::class)
 class HomeScreenTest {
-  @get:Rule(order = 1)
-  val hiltRule = HiltAndroidRule(this)
+    @get:Rule(order = 1)
+    val hiltRule = HiltAndroidRule(this)
 
-  @get:Rule(order = 2)
-  val composeTestRule = createAndroidComposeRule<ComposeTestActivity>()
+    @get:Rule(order = 2)
+    val composeTestRule = createAndroidComposeRule<ComposeTestActivity>()
 
-  private val mockWebServer = MockWebServer()
+    private val mockWebServer = MockWebServer()
 
-  @Before
-  fun setUp() {
-    mockWebServer.start(8080)
-    ApiConfig.BASE_URL = "http://127.0.0.1:8080/"
-    IdlingRegistry.getInstance().register(EspressoIdlingResource.countingIdlingResource)
-    // why setContent not placed here?
-    // well because the viewModel on init would fetch
-    // and the mock response is different on each test case...
-  }
-
-  @After
-  fun tearDown() {
-    mockWebServer.shutdown()
-    IdlingRegistry.getInstance().unregister(EspressoIdlingResource.countingIdlingResource)
-  }
-
-  @Test
-  fun A_loadSuccessful() {
-    val mockSuccessResponse = MockResponse()
-      .setResponseCode(200)
-      .setBody(JsonConverter.readStringFromFile("list_success_response.json"))
-    mockWebServer.enqueue(mockSuccessResponse)
-
-    composeTestRule.setContent {
-      AppTheme {
-        HomeScreen(
-          viewModel = hiltViewModel(),
-          navigateToDetail = {},
-          navigateToAbout = {},
-          navigateToFavorite = {}
-        )
-      }
+    @Before
+    fun setUp() {
+        mockWebServer.start(8080)
+        ApiConfig.BASE_URL = "http://127.0.0.1:8080/"
+        IdlingRegistry.getInstance().register(EspressoIdlingResource.countingIdlingResource)
+        // why setContent not placed here?
+        // well because the viewModel on init would fetch
+        // and the mock response is different on each test case...
     }
 
-    // assert that the bottom appbar exist
-    composeTestRule.onNodeWithContentDescription("Bottom Appbar")
-      .assertExists()
-    // assert that the search bar exist
-    composeTestRule.onNodeWithContentDescription("Search Bar")
-      .assertExists()
-    // assert that the nikke list is showing
-    composeTestRule.onNodeWithContentDescription("List Nikke")
-      .assertExists()
-    // assert that at least one nikke item is showing
-    composeTestRule.onAllNodesWithContentDescription("Nikke Item")
-      .onFirst().assertExists()
-  }
-
-  @Test
-  fun B_loadEmptyData(){
-    val mockEmptyResponse = MockResponse()
-      .setResponseCode(200)
-      .setBody(JsonConverter.readStringFromFile("list_empty_response.json"))
-    mockWebServer.enqueue(mockEmptyResponse)
-
-    composeTestRule.setContent {
-      AppTheme {
-        HomeScreen(
-          viewModel = hiltViewModel(),
-          navigateToDetail = {},
-          navigateToAbout = {},
-          navigateToFavorite = {}
-        )
-      }
+    @After
+    fun tearDown() {
+        mockWebServer.shutdown()
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResource.countingIdlingResource)
     }
 
-    // assert that the bottom appbar exist
-    composeTestRule.onNodeWithContentDescription("Bottom Appbar")
-      .assertExists()
-    // assert that the search bar exist
-    composeTestRule.onNodeWithContentDescription("Search Bar")
-      .assertExists()
-    // assert that the empty layout is showing properly
-    composeTestRule.onNodeWithContentDescription("Error Layout")
-      .assertExists()
-    composeTestRule.onNodeWithContentDescription("Error Message")
-      .assertTextContains("There is nothing here")
-    // assert that retry button is not visible
-    composeTestRule.onNodeWithContentDescription("Retry Button")
-      .assertDoesNotExist()
-  }
+    @Test
+    fun A_loadSuccessful() {
+        val mockSuccessResponse = MockResponse()
+            .setResponseCode(200)
+            .setBody(JsonConverter.readStringFromFile("list_success_response.json"))
+        mockWebServer.enqueue(mockSuccessResponse)
 
-  @Test
-  fun C_loadFailed(){
-    val mockErrorResponse = MockResponse()
-      .setResponseCode(404)
-      .setBody("Not Found")
-    mockWebServer.enqueue(mockErrorResponse)
+        composeTestRule.setContent {
+            AppTheme {
+                HomeScreen(
+                    viewModel = hiltViewModel(),
+                    navigateToDetail = {},
+                    navigateToAbout = {},
+                    navigateToFavorite = {}
+                )
+            }
+        }
 
-    composeTestRule.setContent {
-      AppTheme {
-        HomeScreen(
-          viewModel = hiltViewModel(),
-          navigateToDetail = {},
-          navigateToAbout = {},
-          navigateToFavorite = {}
-        )
-      }
+        // assert that the bottom appbar exist
+        composeTestRule.onNodeWithContentDescription("Bottom Appbar")
+            .assertExists()
+        // assert that the search bar exist
+        composeTestRule.onNodeWithContentDescription("Search Bar")
+            .assertExists()
+        // assert that the nikke list is showing
+        composeTestRule.onNodeWithContentDescription("List Nikke")
+            .assertExists()
+        // assert that at least one nikke item is showing
+        composeTestRule.onAllNodesWithContentDescription("Nikke Item")
+            .onFirst().assertExists()
     }
 
-    // assert that the bottom appbar exist
-    composeTestRule.onNodeWithContentDescription("Bottom Appbar")
-      .assertExists()
-    // assert that the empty layout is showing properly
-    composeTestRule.onNodeWithContentDescription("Error Layout")
-      .assertExists()
-    composeTestRule.onNodeWithContentDescription("Error Message")
-      .assertTextContains("404", substring = true)
-    // assert that retry button is visible
-    composeTestRule.onNodeWithContentDescription("Retry Button")
-      .assertExists()
-  }
+    @Test
+    fun B_loadEmptyData() {
+        val mockEmptyResponse = MockResponse()
+            .setResponseCode(200)
+            .setBody(JsonConverter.readStringFromFile("list_empty_response.json"))
+        mockWebServer.enqueue(mockEmptyResponse)
+
+        composeTestRule.setContent {
+            AppTheme {
+                HomeScreen(
+                    viewModel = hiltViewModel(),
+                    navigateToDetail = {},
+                    navigateToAbout = {},
+                    navigateToFavorite = {}
+                )
+            }
+        }
+
+        // assert that the bottom appbar exist
+        composeTestRule.onNodeWithContentDescription("Bottom Appbar")
+            .assertExists()
+        // assert that the search bar exist
+        composeTestRule.onNodeWithContentDescription("Search Bar")
+            .assertExists()
+        // assert that the empty layout is showing properly
+        composeTestRule.onNodeWithContentDescription("Error Layout")
+            .assertExists()
+        composeTestRule.onNodeWithContentDescription("Error Message")
+            .assertTextContains("There is nothing here")
+        // assert that retry button is not visible
+        composeTestRule.onNodeWithContentDescription("Retry Button")
+            .assertDoesNotExist()
+    }
+
+    @Test
+    fun C_loadFailed() {
+        val mockErrorResponse = MockResponse()
+            .setResponseCode(404)
+            .setBody("Not Found")
+        mockWebServer.enqueue(mockErrorResponse)
+
+        composeTestRule.setContent {
+            AppTheme {
+                HomeScreen(
+                    viewModel = hiltViewModel(),
+                    navigateToDetail = {},
+                    navigateToAbout = {},
+                    navigateToFavorite = {}
+                )
+            }
+        }
+
+        // assert that the bottom appbar exist
+        composeTestRule.onNodeWithContentDescription("Bottom Appbar")
+            .assertExists()
+        // assert that the empty layout is showing properly
+        composeTestRule.onNodeWithContentDescription("Error Layout")
+            .assertExists()
+        composeTestRule.onNodeWithContentDescription("Error Message")
+            .assertTextContains("404", substring = true)
+        // assert that retry button is visible
+        composeTestRule.onNodeWithContentDescription("Retry Button")
+            .assertExists()
+    }
 }

@@ -20,60 +20,60 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DetailViewModel @Inject constructor(
-  private val nikke: NikkeRepository,
-  private val favorite: FavoriteRepository,
-  state: SavedStateHandle
+    private val nikke: NikkeRepository,
+    private val favorite: FavoriteRepository,
+    state: SavedStateHandle
 ) : ViewModel() {
-  private val url: String = state.get<String>(Screen.Detail.args0) ?: ""
+    private val url: String = state.get<String>(Screen.Detail.args0) ?: ""
 
-  private val _uiState: MutableStateFlow<UiState<Nikke>> = MutableStateFlow(Loading)
-  val uiState get() = _uiState.asStateFlow()
+    private val _uiState: MutableStateFlow<UiState<Nikke>> = MutableStateFlow(Loading)
+    val uiState get() = _uiState.asStateFlow()
 
-  private val _isFavorite = MutableStateFlow<Boolean>(false)
-  val isFavorite get() = _isFavorite.asStateFlow()
+    private val _isFavorite = MutableStateFlow<Boolean>(false)
+    val isFavorite get() = _isFavorite.asStateFlow()
 
-  private lateinit var data: Nikke
+    private lateinit var data: Nikke
 
-  init {
-    getNikkeDetail()
-  }
+    init {
+        getNikkeDetail()
+    }
 
-  fun getNikkeDetail() {
-    checkInFavorite()
-    viewModelScope.launch {
-      nikke.getNikke(url)
-        .catch { _uiState.emit(UiState.Error(it.message.toString())) }
-        .collectLatest { result ->
-          if (result.isSuccess) {
-            data = result.getOrThrow()
-            _uiState.emit(UiState.Success(data))
-          } else if (result.isFailure) {
-            _uiState.emit(UiState.Error(result.exceptionOrNull()?.message.toString()))
-          }
+    fun getNikkeDetail() {
+        checkInFavorite()
+        viewModelScope.launch {
+            nikke.getNikke(url)
+                .catch { _uiState.emit(UiState.Error(it.message.toString())) }
+                .collectLatest { result ->
+                    if (result.isSuccess) {
+                        data = result.getOrThrow()
+                        _uiState.emit(UiState.Success(data))
+                    } else if (result.isFailure) {
+                        _uiState.emit(UiState.Error(result.exceptionOrNull()?.message.toString()))
+                    }
+                }
         }
     }
-  }
 
-  private fun checkInFavorite() {
-    viewModelScope.launch {
-      favorite.isNikkeInFavorites(url).collect {
-        _isFavorite.emit(it == 1)
-      }
+    private fun checkInFavorite() {
+        viewModelScope.launch {
+            favorite.isNikkeInFavorites(url).collect {
+                _isFavorite.emit(it == 1)
+            }
+        }
     }
-  }
 
-  fun toggleFavorite() {
-    viewModelScope.launch {
-      if (isFavorite.value) {
-        favorite.removeFromFavorite(data)
-      } else {
-        favorite.addToFavorite(data)
-      }
+    fun toggleFavorite() {
+        viewModelScope.launch {
+            if (isFavorite.value) {
+                favorite.removeFromFavorite(data)
+            } else {
+                favorite.addToFavorite(data)
+            }
+        }
     }
-  }
 
-  override fun onCleared() {
-    super.onCleared()
-    viewModelScope.cancel()
-  }
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
+    }
 }

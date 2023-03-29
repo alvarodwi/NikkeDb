@@ -71,4 +71,3 @@ val md_theme_dark_scrim = Color(0xFF000000)
 val nikkeSr = Color(0xFFBF00FE)
 val nikkeSsr = Color(0xFFFFC000)
 val nikkeR = Color(0xFF0090ff)
-

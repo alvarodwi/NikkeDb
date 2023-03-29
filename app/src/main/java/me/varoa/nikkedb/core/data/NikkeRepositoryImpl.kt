@@ -1,7 +1,6 @@
 package me.varoa.nikkedb.core.data
 
 import kotlinx.coroutines.flow.Flow
-import kotlinx.serialization.json.Json
 import me.varoa.nikkedb.core.data.remote.SafeApiRequest
 import me.varoa.nikkedb.core.data.remote.api.NikkeApiService
 import me.varoa.nikkedb.core.data.remote.json.NikkeJson

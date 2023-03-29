@@ -27,51 +27,51 @@ import me.varoa.nikkedb.ui.theme.AppTheme
 
 @Composable
 fun NikkeItem(
-  nikke: Nikke,
-  navigateToDetail: (String) -> Unit,
-  modifier: Modifier = Modifier
+    nikke: Nikke,
+    navigateToDetail: (String) -> Unit,
+    modifier: Modifier = Modifier
 ) {
-  Card(
-    modifier = modifier
-      .clickable { navigateToDetail(nikke.url) }
-      .wrapContentSize()
-      .semantics {
-        contentDescription = "Nikke Item"
-      }
-  ) {
-    Box(
-      modifier = Modifier.fillMaxWidth(),
-      contentAlignment = Alignment.Center,
+    Card(
+        modifier = modifier
+            .clickable { navigateToDetail(nikke.url) }
+            .wrapContentSize()
+            .semantics {
+                contentDescription = "Nikke Item"
+            }
     ) {
-      Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-      ) {
-        AsyncImage(
-          model = nikke.generateSmallImageUrl(),
-          contentDescription = null,
-          modifier = Modifier
-            .size(144.dp)
-            .padding(top = 16.dp, bottom = 8.dp)
-        )
-        Text(
-          text = nikke.name,
-          style = MaterialTheme.typography.titleMedium,
-          textAlign = TextAlign.Center,
-          modifier = Modifier.padding(bottom = 8.dp)
-        )
-      }
+        Box(
+            modifier = Modifier.fillMaxWidth(),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                AsyncImage(
+                    model = nikke.generateSmallImageUrl(),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(144.dp)
+                        .padding(top = 16.dp, bottom = 8.dp)
+                )
+                Text(
+                    text = nikke.name,
+                    style = MaterialTheme.typography.titleMedium,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
+            }
+        }
     }
-  }
 }
 
 @Preview("NikkeItem")
 @Preview("NikkeItem", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 fun PreviewNikkeItem() {
-  AppTheme {
-    NikkeItem(
-      nikke = dummyNikke(),
-      navigateToDetail = {}
-    )
-  }
+    AppTheme {
+        NikkeItem(
+            nikke = dummyNikke(),
+            navigateToDetail = {}
+        )
+    }
 }

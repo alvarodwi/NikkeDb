@@ -11,12 +11,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AppViewModel @Inject constructor(
-  private val prefs: DataStoreManager
+    private val prefs: DataStoreManager
 ) : ViewModel() {
-  val isDarkMode = prefs.theme.map { it == Theme.DARK.name }
+    val isDarkMode = prefs.theme.map { it == Theme.DARK.name }
 
-  override fun onCleared() {
-    super.onCleared()
-    viewModelScope.cancel()
-  }
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
+    }
 }

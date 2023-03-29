@@ -23,64 +23,64 @@ import me.varoa.nikkedb.ui.theme.AppTheme
 
 @Composable
 fun ErrorLayout(
-  emoji: String,
-  message: String,
-  onRetry: () -> Unit,
-  modifier: Modifier = Modifier,
-  shouldShowRetry: Boolean = true,
+    emoji: String,
+    message: String,
+    onRetry: () -> Unit,
+    modifier: Modifier = Modifier,
+    shouldShowRetry: Boolean = true
 ) {
-  Box(
-    modifier = modifier.fillMaxSize()
-      .semantics {
-        contentDescription = "Error Layout"
-      }
-  ) {
-    Column(
-      horizontalAlignment = Alignment.CenterHorizontally,
-      modifier = Modifier.align(Alignment.Center)
-    ) {
-      Text(
-        text = emoji,
-        fontSize = 96.sp,
-        textAlign = TextAlign.Center,
-        color = MaterialTheme.colorScheme.onBackground,
-        modifier = Modifier.padding(bottom = 16.dp)
-      )
-      Text(
-        text = message,
-        style = MaterialTheme.typography.bodyMedium,
-        color = MaterialTheme.colorScheme.onBackground,
-        textAlign = TextAlign.Center,
-        modifier = Modifier.semantics {
-          contentDescription = "Error Message"
-        }
-      )
-      if(shouldShowRetry){
-        Button(
-          onClick = onRetry,
-          contentPadding = ButtonDefaults.TextButtonContentPadding,
-          modifier = Modifier.padding(top = 12.dp)
+    Box(
+        modifier = modifier.fillMaxSize()
             .semantics {
-              contentDescription = "Retry Button"
+                contentDescription = "Error Layout"
             }
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.align(Alignment.Center)
         ) {
-          Text("Retry")
+            Text(
+                text = emoji,
+                fontSize = 96.sp,
+                textAlign = TextAlign.Center,
+                color = MaterialTheme.colorScheme.onBackground,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+            Text(
+                text = message,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onBackground,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.semantics {
+                    contentDescription = "Error Message"
+                }
+            )
+            if (shouldShowRetry) {
+                Button(
+                    onClick = onRetry,
+                    contentPadding = ButtonDefaults.TextButtonContentPadding,
+                    modifier = Modifier.padding(top = 12.dp)
+                        .semantics {
+                            contentDescription = "Retry Button"
+                        }
+                ) {
+                    Text("Retry")
+                }
+            }
         }
-      }
     }
-  }
 }
 
 @Preview("ErrorLayout")
 @Preview("ErrorLayout", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 fun PreviewErrorLayout() {
-  AppTheme {
-    ErrorLayout(
-      emoji = "🙏",
-      message = "Something went wrong",
-      onRetry = {},
-      modifier = Modifier.background(MaterialTheme.colorScheme.background)
-    )
-  }
+    AppTheme {
+        ErrorLayout(
+            emoji = "🙏",
+            message = "Something went wrong",
+            onRetry = {},
+            modifier = Modifier.background(MaterialTheme.colorScheme.background)
+        )
+    }
 }

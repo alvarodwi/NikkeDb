@@ -33,74 +33,74 @@ import me.varoa.nikkedb.ui.theme.AppTheme
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AboutScreen(
-  navigateBack: () -> Unit = {},
-  lazyListState: LazyListState = rememberLazyListState(),
+    navigateBack: () -> Unit = {},
+    lazyListState: LazyListState = rememberLazyListState()
 ) {
-  Scaffold(
-    topBar = {
-      TopAppBar(
-        title = { Text("About") },
-        navigationIcon = {
-          IconButton(onClick = navigateBack) {
-            Icon(
-              painter = painterResource(R.drawable.ic_arrow_left),
-              contentDescription = null,
-              modifier = Modifier,
-              tint = LocalContentColor.current,
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("About") },
+                navigationIcon = {
+                    IconButton(onClick = navigateBack) {
+                        Icon(
+                            painter = painterResource(R.drawable.ic_arrow_left),
+                            contentDescription = null,
+                            modifier = Modifier,
+                            tint = LocalContentColor.current
+                        )
+                    }
+                }
             )
-          }
-        },
-      )
+        }
+    ) { innerPadding ->
+        Box(
+            modifier = Modifier.padding(innerPadding).fillMaxWidth(),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Image(
+                    painter = painterResource(R.drawable.profile),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .padding(top = 32.dp)
+                        .size(144.dp)
+                        .clip(MaterialTheme.shapes.large)
+                )
+                Text(
+                    text = "Alvaro Dwi Oktaviano",
+                    style = MaterialTheme.typography.titleLarge,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    modifier = Modifier.padding(bottom = 4.dp, top = 24.dp)
+                )
+                Text(
+                    text = "varoalvaro493@gmail.com",
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+                    textAlign = TextAlign.Center
+                )
+                Divider(
+                    modifier = Modifier.padding(vertical = 12.dp, horizontal = 144.dp)
+                )
+                Text(
+                    text = "Mahasiswa di Universitas Padjadjaran\nSekarang sedang kecanduan main game gacha",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+                    textAlign = TextAlign.Center
+                )
+            }
+        }
     }
-  ) { innerPadding ->
-    Box(
-      modifier = Modifier.padding(innerPadding).fillMaxWidth(),
-      contentAlignment = Alignment.Center,
-    ) {
-      Column(
-        horizontalAlignment = Alignment.CenterHorizontally
-      ) {
-        Image(
-          painter = painterResource(R.drawable.profile),
-          contentDescription = null,
-          contentScale = ContentScale.Crop,
-          modifier = Modifier
-            .padding(top = 32.dp)
-            .size(144.dp)
-            .clip(MaterialTheme.shapes.large)
-        )
-        Text(
-          text = "Alvaro Dwi Oktaviano",
-          style = MaterialTheme.typography.titleLarge,
-          textAlign = TextAlign.Center,
-          color = MaterialTheme.colorScheme.onSurface,
-          modifier = Modifier.padding(bottom = 4.dp, top = 24.dp),
-        )
-        Text(
-          text = "varoalvaro493@gmail.com",
-          style = MaterialTheme.typography.bodyLarge,
-          color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
-          textAlign = TextAlign.Center,
-        )
-        Divider(
-          modifier = Modifier.padding(vertical = 12.dp, horizontal = 144.dp)
-        )
-        Text(
-          text = "Mahasiswa di Universitas Padjadjaran\nSekarang sedang kecanduan main game gacha",
-          style = MaterialTheme.typography.bodyMedium,
-          color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
-          textAlign = TextAlign.Center,
-        )
-      }
-    }
-  }
 }
 
 @Preview(name = "About Screen")
 @Preview(name = "About Screen", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 private fun AboutScreenPreview() {
-  AppTheme {
-    AboutScreen()
-  }
+    AppTheme {
+        AboutScreen()
+    }
 }

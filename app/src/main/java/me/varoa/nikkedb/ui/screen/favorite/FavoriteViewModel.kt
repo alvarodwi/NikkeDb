@@ -17,27 +17,27 @@ import javax.inject.Inject
 
 @HiltViewModel
 class FavoriteViewModel @Inject constructor(
-  private val favorite: FavoriteRepository
+    private val favorite: FavoriteRepository
 ) : ViewModel() {
-  private val _uiState: MutableStateFlow<UiState<List<Nikke>>> = MutableStateFlow(Loading)
-  val uiState get() = _uiState.asStateFlow()
+    private val _uiState: MutableStateFlow<UiState<List<Nikke>>> = MutableStateFlow(Loading)
+    val uiState get() = _uiState.asStateFlow()
 
-  init {
-    fetchFavorites()
-  }
+    init {
+        fetchFavorites()
+    }
 
-  fun fetchFavorites() {
-    viewModelScope.launch {
-      favorite.loadFavorites()
-        .catch { _uiState.emit(UiState.Error(it.message.toString())) }
-        .collectLatest { result ->
-          _uiState.emit(UiState.Success(result))
+    fun fetchFavorites() {
+        viewModelScope.launch {
+            favorite.loadFavorites()
+                .catch { _uiState.emit(UiState.Error(it.message.toString())) }
+                .collectLatest { result ->
+                    _uiState.emit(UiState.Success(result))
+                }
         }
     }
-  }
 
-  override fun onCleared() {
-    super.onCleared()
-    viewModelScope.cancel()
-  }
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
+    }
 }

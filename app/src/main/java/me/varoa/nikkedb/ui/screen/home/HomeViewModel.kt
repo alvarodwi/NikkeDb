@@ -19,72 +19,73 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-  private val nikke: NikkeRepository,
-  val prefs: DataStoreManager
+    private val nikke: NikkeRepository,
+    val prefs: DataStoreManager
 ) : ViewModel() {
-  private val _uiState: MutableStateFlow<UiState<List<Nikke>>> =
-    MutableStateFlow(UiState.Loading)
-  val uiState
-    get() = _uiState
+    private val _uiState: MutableStateFlow<UiState<List<Nikke>>> =
+        MutableStateFlow(UiState.Loading)
+    val uiState
+        get() = _uiState
 
-  val isDarkMode = prefs.theme.map { it == Theme.DARK.name }
+    val isDarkMode = prefs.theme.map { it == Theme.DARK.name }
 
-  private val _query = MutableStateFlow("")
-  val query get() = _query.asStateFlow()
+    private val _query = MutableStateFlow("")
+    val query get() = _query.asStateFlow()
 
-  private var data: List<Nikke> = emptyList()
+    private var data: List<Nikke> = emptyList()
 
-  init {
-    getAllNikkes()
-  }
+    init {
+        getAllNikkes()
+    }
 
-  fun getAllNikkes() {
-    viewModelScope.launch {
-      _uiState.emit(UiState.Loading)
-      nikke.getNikkes()
-        .catch { _uiState.emit(UiState.Error(it.message.toString())) }
-        .collect { result ->
-          if (result.isSuccess) {
-            data = result.getOrThrow()
-              .sortedBy { it.name }
-            _uiState.emit(UiState.Success(data))
-          } else if (result.isFailure) {
-            _uiState.emit(UiState.Error(result.exceptionOrNull()?.message.toString()))
-          }
+    fun getAllNikkes() {
+        viewModelScope.launch {
+            _uiState.emit(UiState.Loading)
+            nikke.getNikkes()
+                .catch { _uiState.emit(UiState.Error(it.message.toString())) }
+                .collect { result ->
+                    if (result.isSuccess) {
+                        data = result.getOrThrow()
+                            .sortedBy { it.name }
+                        _uiState.emit(UiState.Success(data))
+                    } else if (result.isFailure) {
+                        _uiState.emit(UiState.Error(result.exceptionOrNull()?.message.toString()))
+                    }
+                }
         }
     }
-  }
 
-  fun setQuery(q : String){
-    viewModelScope.launch {
-      _query.emit(q)
+    fun setQuery(q: String) {
+        viewModelScope.launch {
+            _query.emit(q)
+        }
     }
-  }
 
-  fun searchNikke() {
-    viewModelScope.launch {
-      _uiState.emit(
-        UiState.Success(
-          data
-            .filter { it.name.lowercase().startsWith(query.value.lowercase()) }
-        )
-      )
+    fun searchNikke() {
+        viewModelScope.launch {
+            _uiState.emit(
+                UiState.Success(
+                    data
+                        .filter { it.name.lowercase().startsWith(query.value.lowercase()) }
+                )
+            )
+        }
     }
-  }
 
-  fun toggleTheme() {
-    viewModelScope.launch {
-      prefs.setTheme(
-        if (isDarkMode.first())
-          Theme.LIGHT
-        else
-          Theme.DARK
-      )
+    fun toggleTheme() {
+        viewModelScope.launch {
+            prefs.setTheme(
+                if (isDarkMode.first()) {
+                    Theme.LIGHT
+                } else {
+                    Theme.DARK
+                }
+            )
+        }
     }
-  }
 
-  override fun onCleared() {
-    super.onCleared()
-    viewModelScope.cancel()
-  }
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
+    }
 }

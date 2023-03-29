@@ -34,154 +34,154 @@ import me.varoa.nikkedb.ui.component.LoadingLayout
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-  modifier: Modifier = Modifier,
-  viewModel: HomeViewModel,
-  navigateToDetail: (String) -> Unit,
-  navigateToFavorite: () -> Unit,
-  navigateToAbout: () -> Unit,
+    modifier: Modifier = Modifier,
+    viewModel: HomeViewModel,
+    navigateToDetail: (String) -> Unit,
+    navigateToFavorite: () -> Unit,
+    navigateToAbout: () -> Unit
 ) {
-  val isDarkMode by viewModel.isDarkMode.collectAsState(true)
-  val uiState by viewModel.uiState.collectAsState(UiState.Loading)
-  val query by viewModel.query.collectAsState("")
+    val isDarkMode by viewModel.isDarkMode.collectAsState(true)
+    val uiState by viewModel.uiState.collectAsState(UiState.Loading)
+    val query by viewModel.query.collectAsState("")
 
-  Scaffold(
-    modifier = modifier,
-    bottomBar = {
-      BottomAppBar(
-        modifier = Modifier.semantics {
-          contentDescription = "Bottom Appbar"
-        },
-        actions = {
-          IconButton(
-            onClick = { navigateToFavorite() },
-            modifier = Modifier.semantics {
-              contentDescription = "Menu Action Favorite"
-            }
-          ) {
-            Icon(
-              painter = painterResource(R.drawable.ic_heart),
-              contentDescription = null
+    Scaffold(
+        modifier = modifier,
+        bottomBar = {
+            BottomAppBar(
+                modifier = Modifier.semantics {
+                    contentDescription = "Bottom Appbar"
+                },
+                actions = {
+                    IconButton(
+                        onClick = { navigateToFavorite() },
+                        modifier = Modifier.semantics {
+                            contentDescription = "Menu Action Favorite"
+                        }
+                    ) {
+                        Icon(
+                            painter = painterResource(R.drawable.ic_heart),
+                            contentDescription = null
+                        )
+                    }
+                    IconButton(
+                        onClick = { viewModel.toggleTheme() }
+                    ) {
+                        if (isDarkMode) {
+                            Icon(
+                                painter = painterResource(R.drawable.ic_moon),
+                                contentDescription = null
+                            )
+                        } else {
+                            Icon(
+                                painter = painterResource(R.drawable.ic_sun),
+                                contentDescription = null
+                            )
+                        }
+                    }
+                    IconButton(
+                        onClick = { navigateToAbout() },
+                        modifier = Modifier.semantics {
+                            contentDescription = "Menu Action About"
+                        }
+                    ) {
+                        Icon(
+                            painter = painterResource(R.drawable.ic_info),
+                            contentDescription = null
+                        )
+                    }
+                }
             )
-          }
-          IconButton(
-            onClick = { viewModel.toggleTheme() }
-          ) {
-            if (isDarkMode) {
-              Icon(
-                painter = painterResource(R.drawable.ic_moon),
-                contentDescription = null
-              )
-            } else {
-              Icon(
-                painter = painterResource(R.drawable.ic_sun),
-                contentDescription = null
-              )
+        }
+    ) { innerPadding ->
+        uiState.let { state ->
+            when (state) {
+                is UiState.Loading -> {
+                    LoadingLayout(
+                        modifier = Modifier.padding(innerPadding)
+                    )
+                }
+                is UiState.Success -> {
+                    HomeContent(
+                        data = state.data,
+                        query = query,
+                        onQueryChange = { viewModel.setQuery(it) },
+                        onSearch = {
+                            viewModel.searchNikke()
+                        },
+                        navigateToDetail = navigateToDetail,
+                        modifier = Modifier.padding(innerPadding)
+                    )
+                }
+                is UiState.Error -> {
+                    ErrorLayout(
+                        emoji = "🙏",
+                        message = state.errorMessage,
+                        onRetry = { viewModel.getAllNikkes() },
+                        modifier = Modifier.padding(innerPadding)
+                    )
+                }
             }
-          }
-          IconButton(
-            onClick = { navigateToAbout() },
-            modifier = Modifier.semantics {
-              contentDescription = "Menu Action About"
-            }
-          ) {
-            Icon(
-              painter = painterResource(R.drawable.ic_info),
-              contentDescription = null
-            )
-          }
         }
-      )
     }
-  ) { innerPadding ->
-    uiState.let { state ->
-      when (state) {
-        is UiState.Loading -> {
-          LoadingLayout(
-            modifier = Modifier.padding(innerPadding)
-          )
-        }
-        is UiState.Success -> {
-          HomeContent(
-            data = state.data,
-            query = query,
-            onQueryChange = { viewModel.setQuery(it) },
-            onSearch = {
-              viewModel.searchNikke()
-            },
-            navigateToDetail = navigateToDetail,
-            modifier = Modifier.padding(innerPadding),
-          )
-        }
-        is UiState.Error -> {
-          ErrorLayout(
-            emoji = "🙏",
-            message = state.errorMessage,
-            onRetry = { viewModel.getAllNikkes() },
-            modifier = Modifier.padding(innerPadding),
-          )
-        }
-      }
-    }
-  }
 }
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Composable
 fun HomeContent(
-  modifier: Modifier = Modifier,
-  data: List<Nikke>,
-  query: String,
-  onQueryChange: (String) -> Unit,
-  onSearch: (String) -> Unit,
-  navigateToDetail: (String) -> Unit,
+    modifier: Modifier = Modifier,
+    data: List<Nikke>,
+    query: String,
+    onQueryChange: (String) -> Unit,
+    onSearch: (String) -> Unit,
+    navigateToDetail: (String) -> Unit
 ) {
-  val keyboardController = LocalSoftwareKeyboardController.current
+    val keyboardController = LocalSoftwareKeyboardController.current
 
-  Box(
-    modifier = modifier.fillMaxSize()
-  ) {
-    Column {
-      SearchBar(
-        modifier = Modifier.fillMaxWidth().padding(16.dp)
-          .semantics {
-            contentDescription = "Search Bar"
-          },
-        query = query,
-        active = false,
-        onActiveChange = { },
-        onQueryChange = { onQueryChange(it) },
-        onSearch = {
-          onSearch(it)
-          keyboardController?.hide()
-        },
-        placeholder = { Text("Search NIKKE by name") },
-        leadingIcon = {
-          Icon(
-            painter = painterResource(R.drawable.ic_search),
-            contentDescription = null
-          )
-        },
-        trailingIcon = {
-          if (query.isNotEmpty()) {
-            IconButton(
-              onClick = {
-                onQueryChange("")
-                onSearch("")
-              }
-            ) {
-              Icon(
-                imageVector = Icons.Filled.Clear,
-                contentDescription = null,
-              )
-            }
-          }
+    Box(
+        modifier = modifier.fillMaxSize()
+    ) {
+        Column {
+            SearchBar(
+                modifier = Modifier.fillMaxWidth().padding(16.dp)
+                    .semantics {
+                        contentDescription = "Search Bar"
+                    },
+                query = query,
+                active = false,
+                onActiveChange = { },
+                onQueryChange = { onQueryChange(it) },
+                onSearch = {
+                    onSearch(it)
+                    keyboardController?.hide()
+                },
+                placeholder = { Text("Search NIKKE by name") },
+                leadingIcon = {
+                    Icon(
+                        painter = painterResource(R.drawable.ic_search),
+                        contentDescription = null
+                    )
+                },
+                trailingIcon = {
+                    if (query.isNotEmpty()) {
+                        IconButton(
+                            onClick = {
+                                onQueryChange("")
+                                onSearch("")
+                            }
+                        ) {
+                            Icon(
+                                imageVector = Icons.Filled.Clear,
+                                contentDescription = null
+                            )
+                        }
+                    }
+                }
+
+            ) {}
+            LazyListNikke(
+                data = data,
+                navigateToDetail = navigateToDetail
+            )
         }
-
-      ) {}
-      LazyListNikke(
-        data = data,
-        navigateToDetail = navigateToDetail,
-      )
     }
-  }
 }

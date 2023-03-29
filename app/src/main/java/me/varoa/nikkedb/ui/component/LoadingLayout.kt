@@ -10,16 +10,16 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun LoadingLayout(
-  modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier
 ) {
-  Box(
-    modifier = modifier.fillMaxSize()
-  ) {
-    Column(
-      modifier = Modifier.align(Alignment.Center),
-      horizontalAlignment = Alignment.CenterHorizontally,
-    ){
-      CircularProgressIndicator()
+    Box(
+        modifier = modifier.fillMaxSize()
+    ) {
+        Column(
+            modifier = Modifier.align(Alignment.Center),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            CircularProgressIndicator()
+        }
     }
-  }
 }
