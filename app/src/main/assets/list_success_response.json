@@ -1,0 +1,2246 @@
+[
+  {
+    "_id": "641cc6919c3ead87ea69a96e",
+    "id": "102",
+    "visible": true,
+    "name": "Maxwell",
+    "url": "maxwell",
+    "img": "si_c102_00_s",
+    "imgBig": "c102_00",
+    "description": "A genius researcher who loves nothing more than machines and knowledge. As the brain of Matis, she is both perceptive, whip-smart, and capable of producing weapons in a flash.",
+    "statTableId": 5102,
+    "cv_en": "CV: Amber Lee Connors",
+    "cv_kr": "CV: Kim Yool",
+    "cv_jp": "CV: Sora Amamiya",
+    "manufacturer": "Missilis",
+    "squad": "Matis",
+    "squadId": 1,
+    "class": "Attacker",
+    "burst": "3",
+    "rarity": "SSR",
+    "skins": [
+      "acc"
+    ],
+    "weapon": "SR",
+    "burstGen": "2.8%",
+    "maxAmmo": 6,
+    "damage": "69.04%",
+    "chargeTime": 1,
+    "chargeDamage": "250%",
+    "reloadTime": 2,
+    "element": "Iron",
+    "skills": [
+      {
+        "id": 21021,
+        "name": "Straight Shot",
+        "description": "■ Activates when entering Full Burst. Affects 2 allies with the highest ATK.\r\n<color=#00AEFF>Charge Speed ▲ {description_value_01}% for {description_value_02} sec. \r\nATK ▲ {description_value_03}% for {description_value_04} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "2.65",
+            "description_value_02": "10",
+            "description_value_03": "25.46",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "2.85",
+            "description_value_02": "10",
+            "description_value_03": "27.42",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "3.06",
+            "description_value_02": "10",
+            "description_value_03": "29.38",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "3.26",
+            "description_value_02": "10",
+            "description_value_03": "31.34",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "3.46",
+            "description_value_02": "10",
+            "description_value_03": "33.3",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "3.67",
+            "description_value_02": "10",
+            "description_value_03": "35.26",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "3.87",
+            "description_value_02": "10",
+            "description_value_03": "37.22",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "4.08",
+            "description_value_02": "10",
+            "description_value_03": "39.18",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "4.28",
+            "description_value_02": "10",
+            "description_value_03": "41.14",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "4.48",
+            "description_value_02": "10",
+            "description_value_03": "43.1",
+            "description_value_04": "10"
+          }
+        ]
+      },
+      {
+        "id": 21022,
+        "name": "Spark Shot",
+        "description": "■ Activates when there are above {description_value_01} enemy unit(s), excluding Nikkes. Affects self.\r\n<color=#00AEFF>Critical Rate ▲ {description_value_02}%.\r\nCritical Damage ▲ {description_value_03}%.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "5",
+            "description_value_02": "2.85",
+            "description_value_03": "8.22"
+          },
+          {
+            "description_value_01": "5",
+            "description_value_02": "3.07",
+            "description_value_03": "8.85"
+          },
+          {
+            "description_value_01": "5",
+            "description_value_02": "3.29",
+            "description_value_03": "9.48"
+          },
+          {
+            "description_value_01": "5",
+            "description_value_02": "3.51",
+            "description_value_03": "10.12"
+          },
+          {
+            "description_value_01": "5",
+            "description_value_02": "3.73",
+            "description_value_03": "10.75"
+          },
+          {
+            "description_value_01": "5",
+            "description_value_02": "3.95",
+            "description_value_03": "11.38"
+          },
+          {
+            "description_value_01": "5",
+            "description_value_02": "4.17",
+            "description_value_03": "12.01"
+          },
+          {
+            "description_value_01": "5",
+            "description_value_02": "4.39",
+            "description_value_03": "12.65"
+          },
+          {
+            "description_value_01": "5",
+            "description_value_02": "4.61",
+            "description_value_03": "13.28"
+          },
+          {
+            "description_value_01": "5",
+            "description_value_02": "4.83",
+            "description_value_03": "13.91"
+          }
+        ]
+      },
+      {
+        "id": 11023,
+        "name": "Pierce Shot",
+        "description": "■ Affects self. \r\n<color=#00AEFF>Change the Weapon in use: \r\nCharge Time: 2 sec\r\nDamage: {description_value_01}% of ATK \r\nFull Charge Damage: 300% damage \r\nMax Ammunition Capacity: {description_value_02} round(s) \r\nAdditional Effect: Pierce</color>",
+        "cooldown": 40,
+        "levels": [
+          {
+            "description_value_01": "144.85",
+            "description_value_02": "1"
+          },
+          {
+            "description_value_01": "219.14",
+            "description_value_02": "1"
+          },
+          {
+            "description_value_01": "293.42",
+            "description_value_02": "1"
+          },
+          {
+            "description_value_01": "367.71",
+            "description_value_02": "1"
+          },
+          {
+            "description_value_01": "442",
+            "description_value_02": "1"
+          },
+          {
+            "description_value_01": "516.28",
+            "description_value_02": "1"
+          },
+          {
+            "description_value_01": "590.57",
+            "description_value_02": "1"
+          },
+          {
+            "description_value_01": "664.85",
+            "description_value_02": "1"
+          },
+          {
+            "description_value_01": "739.14",
+            "description_value_02": "1"
+          },
+          {
+            "description_value_01": "813.42",
+            "description_value_02": "1"
+          }
+        ]
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "641cc6919c3ead87ea69a96f",
+    "id": "140",
+    "visible": true,
+    "name": "Sugar",
+    "url": "sugar",
+    "img": "si_c140_00_s",
+    "imgBig": "c140_00",
+    "description": "A gearhead, who gets a thrill from burning rubber, sells sugar coffee in Cafe Sweety.",
+    "statTableId": 5104,
+    "cv_en": "CV: Anairis Quiñones",
+    "cv_kr": "CV: Jung Yoo-jung",
+    "cv_jp": "CV: Ayako Kawasumi",
+    "manufacturer": "Tetra",
+    "squad": "Cafe Sweety",
+    "squadId": 2,
+    "class": "Attacker",
+    "burst": "3",
+    "rarity": "SSR",
+    "skins": [],
+    "weapon": "SG",
+    "burstGen": "0.45%",
+    "maxAmmo": 9,
+    "damage": "231.6%",
+    "chargeTime": 0,
+    "chargeDamage": "100%",
+    "reloadTime": 0.67,
+    "element": "Iron",
+    "skills": [
+      {
+        "id": 21401,
+        "name": "Black Typhoon",
+        "description": "■ Affects self. {description_value_01}% chance of casting when Cover is under attack. \r\n<color=#00AEFF>Critical Damage ▲ {description_value_02}% for {description_value_03} sec. \r\nReloading Speed ▲ {description_value_04}% for {description_value_05} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "20",
+            "description_value_02": "9.68",
+            "description_value_03": "10",
+            "description_value_04": "7.16",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "20",
+            "description_value_02": "10.43",
+            "description_value_03": "10",
+            "description_value_04": "7.71",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "20",
+            "description_value_02": "11.17",
+            "description_value_03": "10",
+            "description_value_04": "8.26",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "20",
+            "description_value_02": "11.92",
+            "description_value_03": "10",
+            "description_value_04": "8.82",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "20",
+            "description_value_02": "12.66",
+            "description_value_03": "10",
+            "description_value_04": "9.37",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "20",
+            "description_value_02": "13.41",
+            "description_value_03": "10",
+            "description_value_04": "9.92",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "20",
+            "description_value_02": "14.15",
+            "description_value_03": "10",
+            "description_value_04": "10.47",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "20",
+            "description_value_02": "14.9",
+            "description_value_03": "10",
+            "description_value_04": "11.02",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "20",
+            "description_value_02": "15.64",
+            "description_value_03": "10",
+            "description_value_04": "11.57",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "20",
+            "description_value_02": "16.39",
+            "description_value_03": "10",
+            "description_value_04": "12.12",
+            "description_value_05": "10"
+          }
+        ]
+      },
+      {
+        "id": 21402,
+        "name": "Noire Sensor",
+        "description": "■ Affects self. Cast when entering Full Burst.\r\n<color=#00AEFF>Critical Rate ▲ {description_value_01}% for {description_value_02} sec.</color> \r\n■ Affects all allies with a Shotgun. Cast when entering Full Burst.\r\n<color=#00AEFF>Max Ammunition Capacity ▲ {description_value_03}% for {description_value_04} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "7.69",
+            "description_value_02": "10",
+            "description_value_03": "49.52",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "8.28",
+            "description_value_02": "10",
+            "description_value_03": "53.33",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "8.87",
+            "description_value_02": "10",
+            "description_value_03": "57.14",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "9.46",
+            "description_value_02": "10",
+            "description_value_03": "60.95",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "10.06",
+            "description_value_02": "10",
+            "description_value_03": "64.76",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "10.65",
+            "description_value_02": "10",
+            "description_value_03": "68.57",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "11.24",
+            "description_value_02": "10",
+            "description_value_03": "72.38",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "11.83",
+            "description_value_02": "10",
+            "description_value_03": "76.19",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "12.42",
+            "description_value_02": "10",
+            "description_value_03": "80",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "13.02",
+            "description_value_02": "10",
+            "description_value_03": "83.8",
+            "description_value_04": "10"
+          }
+        ]
+      },
+      {
+        "id": 11403,
+        "name": "Trouble Shooter",
+        "description": "■ Affects self. \r\n<color=#00AEFF>ATK Speed ▲ {description_value_01}% for {description_value_02} sec. \r\nHit Rate ▲{description_value_03}% for {description_value_04} sec.</color>",
+        "cooldown": 40,
+        "levels": [
+          {
+            "description_value_01": "39",
+            "description_value_02": "15",
+            "description_value_03": "19.5",
+            "description_value_04": "15"
+          },
+          {
+            "description_value_01": "42",
+            "description_value_02": "15",
+            "description_value_03": "21",
+            "description_value_04": "15"
+          },
+          {
+            "description_value_01": "45",
+            "description_value_02": "15",
+            "description_value_03": "22.5",
+            "description_value_04": "15"
+          },
+          {
+            "description_value_01": "48",
+            "description_value_02": "15",
+            "description_value_03": "24",
+            "description_value_04": "15"
+          },
+          {
+            "description_value_01": "51",
+            "description_value_02": "15",
+            "description_value_03": "25.5",
+            "description_value_04": "15"
+          },
+          {
+            "description_value_01": "54",
+            "description_value_02": "15",
+            "description_value_03": "27",
+            "description_value_04": "15"
+          },
+          {
+            "description_value_01": "57",
+            "description_value_02": "15",
+            "description_value_03": "28.5",
+            "description_value_04": "15"
+          },
+          {
+            "description_value_01": "60",
+            "description_value_02": "15",
+            "description_value_03": "30",
+            "description_value_04": "15"
+          },
+          {
+            "description_value_01": "63",
+            "description_value_02": "15",
+            "description_value_03": "31.5",
+            "description_value_04": "15"
+          },
+          {
+            "description_value_01": "66",
+            "description_value_02": "15",
+            "description_value_03": "33",
+            "description_value_04": "15"
+          }
+        ]
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "641cc6919c3ead87ea69a970",
+    "id": "210",
+    "visible": true,
+    "name": "Exia",
+    "url": "exia",
+    "img": "si_c210_00_s",
+    "imgBig": "c210_00",
+    "description": "A hacking wunderkind from Protocol. No one can hold a candle to her when it comes to video games.",
+    "statTableId": 5302,
+    "cv_en": "CV: Lauren Landa",
+    "cv_kr": "CV: Cheon Ji-seon",
+    "cv_jp": "CV: Sumire Uesaka",
+    "manufacturer": "Tetra",
+    "squad": "Protocol",
+    "squadId": 3,
+    "class": "Supporter",
+    "burst": "1",
+    "rarity": "SSR",
+    "skins": [],
+    "weapon": "SR",
+    "burstGen": "2.8%",
+    "maxAmmo": 6,
+    "damage": "69.04%",
+    "chargeTime": 1,
+    "chargeDamage": "250%",
+    "reloadTime": 2,
+    "element": "Electric",
+    "skills": [
+      {
+        "id": 22101,
+        "name": "Invasion",
+        "description": "■ When the last round of ammunition hits, affects the target if the caster is in Collect Hacking Code.\r\n<color=#00AEFF>ATK ▼ {description_value_01}% for {description_value_02} sec.\r\nDEF ▼ {description_value_03}% for {description_value_04} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "7.57",
+            "description_value_02": "5",
+            "description_value_03": "7.57",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "8.26",
+            "description_value_02": "5",
+            "description_value_03": "8.26",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "8.95",
+            "description_value_02": "5",
+            "description_value_03": "8.95",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "9.63",
+            "description_value_02": "5",
+            "description_value_03": "9.63",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "10.32",
+            "description_value_02": "5",
+            "description_value_03": "10.32",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "11.01",
+            "description_value_02": "5",
+            "description_value_03": "11.01",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "11.7",
+            "description_value_02": "5",
+            "description_value_03": "11.7",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "12.39",
+            "description_value_02": "5",
+            "description_value_03": "12.39",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "13.08",
+            "description_value_02": "5",
+            "description_value_03": "13.08",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "13.77",
+            "description_value_02": "5",
+            "description_value_03": "13.77",
+            "description_value_04": "5"
+          }
+        ]
+      },
+      {
+        "id": 22102,
+        "name": "Secret Code",
+        "description": "■ Activates when the last round of ammunition hits. Affects self.\r\n<color=#00AEFF>Collect Hacking Code: ATK ▲ {description_value_01}%, stacks up to {description_value_02} time(s) and lasts for {description_value_03} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "9.24",
+            "description_value_02": "5",
+            "description_value_03": "15"
+          },
+          {
+            "description_value_01": "10.08",
+            "description_value_02": "5",
+            "description_value_03": "15"
+          },
+          {
+            "description_value_01": "10.92",
+            "description_value_02": "5",
+            "description_value_03": "15"
+          },
+          {
+            "description_value_01": "11.76",
+            "description_value_02": "5",
+            "description_value_03": "15"
+          },
+          {
+            "description_value_01": "12.6",
+            "description_value_02": "5",
+            "description_value_03": "15"
+          },
+          {
+            "description_value_01": "13.44",
+            "description_value_02": "5",
+            "description_value_03": "15"
+          },
+          {
+            "description_value_01": "14.28",
+            "description_value_02": "5",
+            "description_value_03": "15"
+          },
+          {
+            "description_value_01": "15.12",
+            "description_value_02": "5",
+            "description_value_03": "15"
+          },
+          {
+            "description_value_01": "15.96",
+            "description_value_02": "5",
+            "description_value_03": "15"
+          },
+          {
+            "description_value_01": "16.8",
+            "description_value_02": "5",
+            "description_value_03": "15"
+          }
+        ]
+      },
+      {
+        "id": 12103,
+        "name": "Partisan Protocol",
+        "description": "■ Affects {description_value_01} enemy unit(s) with the highest DEF.\r\n<color=#00AEFF>Deals {description_value_02}% of ATK as damage.\r\nDEF ▼ {description_value_03}% for {description_value_04} sec.</color>\r\n■ Affects the same target(s) when Collect Hacking Code is fully stacked.\r\n<color=#00AEFF>Deals {description_value_05}% of ATK as additional damage.</color>",
+        "cooldown": 20,
+        "levels": [
+          {
+            "description_value_01": "10",
+            "description_value_02": "67.27",
+            "description_value_03": "1.49",
+            "description_value_04": "5",
+            "description_value_05": "67.27"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "73.39",
+            "description_value_03": "1.63",
+            "description_value_04": "5",
+            "description_value_05": "73.39"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "79.51",
+            "description_value_03": "1.76",
+            "description_value_04": "5",
+            "description_value_05": "79.51"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "85.62",
+            "description_value_03": "1.9",
+            "description_value_04": "5",
+            "description_value_05": "85.62"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "91.74",
+            "description_value_03": "2.03",
+            "description_value_04": "5",
+            "description_value_05": "91.74"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "97.86",
+            "description_value_03": "2.17",
+            "description_value_04": "5",
+            "description_value_05": "97.86"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "103.97",
+            "description_value_03": "2.31",
+            "description_value_04": "5",
+            "description_value_05": "103.97"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "110.09",
+            "description_value_03": "2.44",
+            "description_value_04": "5",
+            "description_value_05": "110.09"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "116.21",
+            "description_value_03": "2.58",
+            "description_value_04": "5",
+            "description_value_05": "116.21"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "122.32",
+            "description_value_03": "2.71",
+            "description_value_04": "5",
+            "description_value_05": "122.32"
+          }
+        ]
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "641cc6919c3ead87ea69a971",
+    "id": "191",
+    "visible": true,
+    "name": "Alice",
+    "url": "alice",
+    "img": "si_c191_00_s",
+    "imgBig": "c191_00",
+    "description": "An endearing individual who often indulges in fantasy with a somewhat unique worldview. She's a member of Unlimited, and spends her days looking for Rabbity.",
+    "statTableId": 5102,
+    "cv_en": "CV: Kayli Mills",
+    "cv_kr": "CV: Sung Ye-won",
+    "cv_jp": "CV: Hina Yōmiya",
+    "manufacturer": "Tetra",
+    "squad": "Unlimited",
+    "squadId": 4,
+    "class": "Attacker",
+    "burst": "3",
+    "rarity": "SSR",
+    "skins": [],
+    "weapon": "SR",
+    "burstGen": "2.8%",
+    "maxAmmo": 6,
+    "damage": "69.04%",
+    "chargeTime": 1.5,
+    "chargeDamage": "350%",
+    "reloadTime": 2,
+    "element": "Fire",
+    "skills": [
+      {
+        "id": 21911,
+        "name": "Energizing Carrot",
+        "description": "■ Activates when entering Full Burst. Affects {description_value_01} ally unit(s) with the highest ATK.\r\n<color=#00AEFF>Charge Speed ▲ {description_value_02}% for {description_value_03} sec. \r\nCharge Damage ▲ {description_value_04}% for {description_value_05} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "2",
+            "description_value_02": "6.89",
+            "description_value_03": "10",
+            "description_value_04": "4.13",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "7.42",
+            "description_value_03": "10",
+            "description_value_04": "4.45",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "7.95",
+            "description_value_03": "10",
+            "description_value_04": "4.77",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "8.48",
+            "description_value_03": "10",
+            "description_value_04": "5.09",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "9.02",
+            "description_value_03": "10",
+            "description_value_04": "5.41",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "9.55",
+            "description_value_03": "10",
+            "description_value_04": "5.73",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "10.08",
+            "description_value_03": "10",
+            "description_value_04": "6.04",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "10.61",
+            "description_value_03": "10",
+            "description_value_04": "6.36",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "11.14",
+            "description_value_03": "10",
+            "description_value_04": "6.68",
+            "description_value_05": "10"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "11.67",
+            "description_value_03": "10",
+            "description_value_04": "7",
+            "description_value_05": "10"
+          }
+        ]
+      },
+      {
+        "id": 21912,
+        "name": "Healthy Carrot",
+        "description": "■ Affects self. Activates when above {description_value_01}% HP.\r\n<color=#00AEFF>Gain continuous Pierce.</color> \r\n■ Affects self. Activates when HP falls below {description_value_02}%. \r\n<color=#00AEFF>Continuously recover HP by {description_value_03}% of attack damage.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "80",
+            "description_value_02": "80",
+            "description_value_03": "2.45"
+          },
+          {
+            "description_value_01": "80",
+            "description_value_02": "80",
+            "description_value_03": "3.08"
+          },
+          {
+            "description_value_01": "80",
+            "description_value_02": "80",
+            "description_value_03": "3.71"
+          },
+          {
+            "description_value_01": "80",
+            "description_value_02": "80",
+            "description_value_03": "4.34"
+          },
+          {
+            "description_value_01": "80",
+            "description_value_02": "80",
+            "description_value_03": "4.97"
+          },
+          {
+            "description_value_01": "80",
+            "description_value_02": "80",
+            "description_value_03": "5.6"
+          },
+          {
+            "description_value_01": "80",
+            "description_value_02": "80",
+            "description_value_03": "6.23"
+          },
+          {
+            "description_value_01": "80",
+            "description_value_02": "80",
+            "description_value_03": "6.86"
+          },
+          {
+            "description_value_01": "80",
+            "description_value_02": "80",
+            "description_value_03": "7.49"
+          },
+          {
+            "description_value_01": "80",
+            "description_value_02": "80",
+            "description_value_03": "8.12"
+          }
+        ]
+      },
+      {
+        "id": 11913,
+        "name": "Wonderland",
+        "description": "■ Affects self. \r\n<color=#00AEFF>Charging Speed ▲ {description_value_01}% for {description_value_02} sec. \r\nATK ▲ {description_value_03}% for {description_value_04} sec.</color>",
+        "cooldown": 40,
+        "levels": [
+          {
+            "description_value_01": "54.84",
+            "description_value_02": "10",
+            "description_value_03": "14.62",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "57.65",
+            "description_value_02": "10",
+            "description_value_03": "19.12",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "60.46",
+            "description_value_02": "10",
+            "description_value_03": "23.62",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "63.28",
+            "description_value_02": "10",
+            "description_value_03": "28.12",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "66.09",
+            "description_value_02": "10",
+            "description_value_03": "32.62",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "68.9",
+            "description_value_02": "10",
+            "description_value_03": "37.12",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "71.71",
+            "description_value_02": "10",
+            "description_value_03": "41.62",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "74.53",
+            "description_value_02": "10",
+            "description_value_03": "46.12",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "77.34",
+            "description_value_02": "10",
+            "description_value_03": "50.62",
+            "description_value_04": "10"
+          },
+          {
+            "description_value_01": "80.15",
+            "description_value_02": "10",
+            "description_value_03": "55.12",
+            "description_value_04": "10"
+          }
+        ]
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "641cc6919c3ead87ea69a972",
+    "id": "90",
+    "visible": true,
+    "name": "Emma",
+    "url": "emma",
+    "img": "si_c090_00_s",
+    "imgBig": "c090_00",
+    "description": "Something of a sister figure for Absolute, who enjoys caring for others. Yet, there are times when she lets her guard down.",
+    "statTableId": 5306,
+    "cv_en": "CV: Dominique North",
+    "cv_kr": "CV: Lee Myung-ho",
+    "cv_jp": "CV: Mamiko Noto",
+    "manufacturer": "Elysion",
+    "squad": "Absolute",
+    "squadId": 5,
+    "class": "Supporter",
+    "burst": "1",
+    "rarity": "SSR",
+    "skins": [],
+    "weapon": "MG",
+    "burstGen": "0.05%",
+    "maxAmmo": 300,
+    "damage": "5.57%",
+    "chargeTime": 0,
+    "chargeDamage": "100%",
+    "reloadTime": 2.5,
+    "element": "Fire",
+    "skills": [
+      {
+        "id": 20901,
+        "name": "Cheerleading",
+        "description": "■ There is a {description_value_02}% chance of activating when attacked. Affects all allies.\r\n<color=#00AEFF>Restore HP equal to {description_value_01}% of the caster's Max HP.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "5.92",
+            "description_value_02": "5",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "6.46",
+            "description_value_02": "5",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "7",
+            "description_value_02": "5",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "7.54",
+            "description_value_02": "5",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "8.08",
+            "description_value_02": "5",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "8.62",
+            "description_value_02": "5",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "9.15",
+            "description_value_02": "5",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "9.69",
+            "description_value_02": "5",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "10.23",
+            "description_value_02": "5",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "10.77",
+            "description_value_02": "5",
+            "description_value_03": "5"
+          }
+        ]
+      },
+      {
+        "id": 20902,
+        "name": "Temptation",
+        "description": "■ Activates when above {description_value_01}% HP. Affects all allies.\r\n<color=#00AEFF>HP Recovery ▲ {description_value_02}% permanently.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "90",
+            "description_value_02": "7.33"
+          },
+          {
+            "description_value_01": "90",
+            "description_value_02": "8"
+          },
+          {
+            "description_value_01": "90",
+            "description_value_02": "8.66"
+          },
+          {
+            "description_value_01": "90",
+            "description_value_02": "9.33"
+          },
+          {
+            "description_value_01": "90",
+            "description_value_02": "10"
+          },
+          {
+            "description_value_01": "90",
+            "description_value_02": "10.66"
+          },
+          {
+            "description_value_01": "90",
+            "description_value_02": "11.33"
+          },
+          {
+            "description_value_01": "90",
+            "description_value_02": "12"
+          },
+          {
+            "description_value_01": "90",
+            "description_value_02": "12.66"
+          },
+          {
+            "description_value_01": "90",
+            "description_value_02": "13.33"
+          }
+        ]
+      },
+      {
+        "id": 10903,
+        "name": "Altruism",
+        "description": "■ Affects all allies.\r\n<color=#00AEFF>Restore HP equal to {description_value_01}% of the caster's Max HP.\r\nRestore HP equal to {description_value_02}% of ATK for {description_value_03} sec.</color>",
+        "cooldown": 40,
+        "levels": [
+          {
+            "description_value_01": "21.78",
+            "description_value_02": "21.78",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "23.76",
+            "description_value_02": "23.76",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "25.74",
+            "description_value_02": "25.74",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "27.72",
+            "description_value_02": "27.72",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "29.7",
+            "description_value_02": "29.7",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "31.68",
+            "description_value_02": "31.68",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "33.66",
+            "description_value_02": "33.66",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "35.64",
+            "description_value_02": "35.64",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "37.62",
+            "description_value_02": "37.62",
+            "description_value_03": "5"
+          },
+          {
+            "description_value_01": "39.6",
+            "description_value_02": "39.6",
+            "description_value_03": "5"
+          }
+        ]
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "641cc6919c3ead87ea69a973",
+    "id": "160",
+    "visible": true,
+    "name": "Yuni",
+    "url": "yuni",
+    "img": "si_c160_00_s",
+    "imgBig": "c160_00",
+    "description": "A sadistic girl from Wardress. She can control others' senses, and she communicates by inflicting pain upon others.",
+    "statTableId": 5205,
+    "cv_en": "CV: Alexis Tipton",
+    "cv_kr": "CV: Kim Chae-ha",
+    "cv_jp": "CV: Sumire Morohoshi",
+    "manufacturer": "Missilis",
+    "squad": "Wardress",
+    "squadId": 6,
+    "class": "Defender",
+    "burst": "2",
+    "rarity": "SSR",
+    "skins": [],
+    "weapon": "RL",
+    "burstGen": "1.4%",
+    "maxAmmo": 6,
+    "damage": "61.3%",
+    "chargeTime": 1.5,
+    "chargeDamage": "350%",
+    "reloadTime": 2,
+    "element": "Fire",
+    "skills": [
+      {
+        "id": 21601,
+        "name": "DMNS",
+        "description": "■ Affects all allies. Activates when entering Full Burst.\r\n<color=#00AEFF>Charging Speed ▲ {description_value_01}% for {description_value_02} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "4.93",
+            "description_value_02": "10"
+          },
+          {
+            "description_value_01": "5.38",
+            "description_value_02": "10"
+          },
+          {
+            "description_value_01": "5.83",
+            "description_value_02": "10"
+          },
+          {
+            "description_value_01": "6.28",
+            "description_value_02": "10"
+          },
+          {
+            "description_value_01": "6.73",
+            "description_value_02": "10"
+          },
+          {
+            "description_value_01": "7.18",
+            "description_value_02": "10"
+          },
+          {
+            "description_value_01": "7.63",
+            "description_value_02": "10"
+          },
+          {
+            "description_value_01": "8.08",
+            "description_value_02": "10"
+          },
+          {
+            "description_value_01": "8.53",
+            "description_value_02": "10"
+          },
+          {
+            "description_value_01": "8.97",
+            "description_value_02": "10"
+          }
+        ]
+      },
+      {
+        "id": 21602,
+        "name": "SDS",
+        "description": "■ Activates when attacking with Full Charge. Affects all allies.\r\n<color=#00AEFF>DEF ▲ {description_value_01}% for {description_value_02} sec. \r\nRestores {description_value_03}% of attack damage as HP for {description_value_04} sec. \r\nMax Ammunition Capacity ▲ {description_value_05} round(s) for {description_value_06} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "1.52",
+            "description_value_02": "10",
+            "description_value_03": "1.52",
+            "description_value_04": "10",
+            "description_value_05": "1",
+            "description_value_06": "5"
+          },
+          {
+            "description_value_01": "1.66",
+            "description_value_02": "10",
+            "description_value_03": "1.66",
+            "description_value_04": "10",
+            "description_value_05": "1",
+            "description_value_06": "5"
+          },
+          {
+            "description_value_01": "1.8",
+            "description_value_02": "10",
+            "description_value_03": "1.8",
+            "description_value_04": "10",
+            "description_value_05": "1",
+            "description_value_06": "5"
+          },
+          {
+            "description_value_01": "1.94",
+            "description_value_02": "10",
+            "description_value_03": "1.94",
+            "description_value_04": "10",
+            "description_value_05": "1",
+            "description_value_06": "5"
+          },
+          {
+            "description_value_01": "2.07",
+            "description_value_02": "10",
+            "description_value_03": "2.07",
+            "description_value_04": "10",
+            "description_value_05": "1",
+            "description_value_06": "5"
+          },
+          {
+            "description_value_01": "2.21",
+            "description_value_02": "10",
+            "description_value_03": "2.21",
+            "description_value_04": "10",
+            "description_value_05": "1",
+            "description_value_06": "5"
+          },
+          {
+            "description_value_01": "2.35",
+            "description_value_02": "10",
+            "description_value_03": "2.35",
+            "description_value_04": "10",
+            "description_value_05": "1",
+            "description_value_06": "5"
+          },
+          {
+            "description_value_01": "2.49",
+            "description_value_02": "10",
+            "description_value_03": "2.49",
+            "description_value_04": "10",
+            "description_value_05": "1",
+            "description_value_06": "5"
+          },
+          {
+            "description_value_01": "2.63",
+            "description_value_02": "10",
+            "description_value_03": "2.63",
+            "description_value_04": "10",
+            "description_value_05": "1",
+            "description_value_06": "5"
+          },
+          {
+            "description_value_01": "2.77",
+            "description_value_02": "10",
+            "description_value_03": "2.77",
+            "description_value_04": "10",
+            "description_value_05": "1",
+            "description_value_06": "5"
+          }
+        ]
+      },
+      {
+        "id": 11603,
+        "name": "BDG",
+        "description": "■ Affects enemies within attack range. \r\n<color=#00AEFF>[Target] Deals {description_value_01}% of ATK as damage. \r\n[Target] Immobilizes the target(s) for {description_value_02} sec.</color>",
+        "cooldown": 20,
+        "levels": [
+          {
+            "description_value_01": "172.4",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "192",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "211.59",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "231.18",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "250.77",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "270.36",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "289.95",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "309.55",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "329.14",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "348.73",
+            "description_value_02": "5"
+          }
+        ]
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "641cc6919c3ead87ea69a974",
+    "id": "170",
+    "visible": true,
+    "name": "Privaty",
+    "url": "privaty",
+    "img": "si_c170_00_s",
+    "imgBig": "c170_00",
+    "description": "A girl who puts on a hard front, but in fact she enjoys taking care of others. At this juncture, she is the most highly skilled member of Triangle.",
+    "statTableId": 5101,
+    "cv_en": "CV: Kira Buckland",
+    "cv_kr": "CV: Bang Siu",
+    "cv_jp": "CV: Ayana Taketatsu",
+    "manufacturer": "Elysion",
+    "squad": "Triangle",
+    "squadId": 7,
+    "class": "Attacker",
+    "burst": "3",
+    "rarity": "SSR",
+    "skins": [],
+    "weapon": "AR",
+    "burstGen": "0.2%",
+    "maxAmmo": 60,
+    "damage": "13.65%",
+    "chargeTime": 0,
+    "chargeDamage": "100%",
+    "reloadTime": 1,
+    "element": "Water",
+    "skills": [
+      {
+        "id": 21701,
+        "name": "EX magazine",
+        "description": "■ Affects all allies. Cast when entering Full Burst. \r\n<color=#00AEFF>ATK ▲ {description_value_01}% for {description_value_02} sec. \r\nReloading Speed ▲ {description_value_03}% for {description_value_04} sec. \r\nMax Ammunition Capacity ▼ {description_value_05}% for {description_value_06} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "18.77",
+            "description_value_02": "10",
+            "description_value_03": "22.88",
+            "description_value_04": "10",
+            "description_value_05": "50.66",
+            "description_value_06": "10"
+          },
+          {
+            "description_value_01": "19.3",
+            "description_value_02": "10",
+            "description_value_03": "26.02",
+            "description_value_04": "10",
+            "description_value_05": "50.66",
+            "description_value_06": "10"
+          },
+          {
+            "description_value_01": "19.84",
+            "description_value_02": "10",
+            "description_value_03": "29.16",
+            "description_value_04": "10",
+            "description_value_05": "50.66",
+            "description_value_06": "10"
+          },
+          {
+            "description_value_01": "20.38",
+            "description_value_02": "10",
+            "description_value_03": "32.3",
+            "description_value_04": "10",
+            "description_value_05": "50.66",
+            "description_value_06": "10"
+          },
+          {
+            "description_value_01": "20.92",
+            "description_value_02": "10",
+            "description_value_03": "35.45",
+            "description_value_04": "10",
+            "description_value_05": "50.66",
+            "description_value_06": "10"
+          },
+          {
+            "description_value_01": "21.46",
+            "description_value_02": "10",
+            "description_value_03": "38.59",
+            "description_value_04": "10",
+            "description_value_05": "50.66",
+            "description_value_06": "10"
+          },
+          {
+            "description_value_01": "22",
+            "description_value_02": "10",
+            "description_value_03": "41.73",
+            "description_value_04": "10",
+            "description_value_05": "50.66",
+            "description_value_06": "10"
+          },
+          {
+            "description_value_01": "22.54",
+            "description_value_02": "10",
+            "description_value_03": "44.88",
+            "description_value_04": "10",
+            "description_value_05": "50.66",
+            "description_value_06": "10"
+          },
+          {
+            "description_value_01": "23.08",
+            "description_value_02": "10",
+            "description_value_03": "48.02",
+            "description_value_04": "10",
+            "description_value_05": "50.66",
+            "description_value_06": "10"
+          },
+          {
+            "description_value_01": "23.61",
+            "description_value_02": "10",
+            "description_value_03": "51.16",
+            "description_value_04": "10",
+            "description_value_05": "50.66",
+            "description_value_06": "10"
+          }
+        ]
+      },
+      {
+        "id": 21702,
+        "name": "LD Assault",
+        "description": "■ Activates when the last bullet hits the target. Affects the target.\r\n<color=#00AEFF>[Target] Deals {description_value_01}% of ATK as Additional Damage.</color> \r\n■ Affects the enemy hit by the last round of ammunition if they are Stunned.\r\n<color=#00AEFF>[Target] Deals {description_value_02}% of ATK as Additional Damage.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "50.7",
+            "description_value_02": "643.5"
+          },
+          {
+            "description_value_01": "54.6",
+            "description_value_02": "693"
+          },
+          {
+            "description_value_01": "58.5",
+            "description_value_02": "742.5"
+          },
+          {
+            "description_value_01": "62.4",
+            "description_value_02": "792"
+          },
+          {
+            "description_value_01": "66.3",
+            "description_value_02": "841.5"
+          },
+          {
+            "description_value_01": "70.2",
+            "description_value_02": "891"
+          },
+          {
+            "description_value_01": "74.09",
+            "description_value_02": "940.5"
+          },
+          {
+            "description_value_01": "77.99",
+            "description_value_02": "990"
+          },
+          {
+            "description_value_01": "81.9",
+            "description_value_02": "1039.5"
+          },
+          {
+            "description_value_01": "85.79",
+            "description_value_02": "1089"
+          }
+        ]
+      },
+      {
+        "id": 11703,
+        "name": "AK Missile",
+        "description": "■ Affects all enemies. \r\n<color=#00AEFF>Deals {description_value_01}% of ATK as damage.\r\nStun for {description_value_02} sec.</color>",
+        "cooldown": 40,
+        "levels": [
+          {
+            "description_value_01": "270.56",
+            "description_value_02": "3"
+          },
+          {
+            "description_value_01": "291.37",
+            "description_value_02": "3"
+          },
+          {
+            "description_value_01": "312.18",
+            "description_value_02": "3"
+          },
+          {
+            "description_value_01": "333",
+            "description_value_02": "3"
+          },
+          {
+            "description_value_01": "353.81",
+            "description_value_02": "3"
+          },
+          {
+            "description_value_01": "374.62",
+            "description_value_02": "3"
+          },
+          {
+            "description_value_01": "395.43",
+            "description_value_02": "3"
+          },
+          {
+            "description_value_01": "416.25",
+            "description_value_02": "3"
+          },
+          {
+            "description_value_01": "437.06",
+            "description_value_02": "3"
+          },
+          {
+            "description_value_01": "457.87",
+            "description_value_02": "3"
+          }
+        ]
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "641cc6919c3ead87ea69a975",
+    "id": "142",
+    "visible": true,
+    "name": "Frima",
+    "url": "frima",
+    "img": "si_c142_00_s",
+    "imgBig": "c142_00",
+    "description": "The leader of Cafe Sweety, who sells cream coffee. Her inherent laziness actually leads her to discover the most efficient ways to get things done.",
+    "statTableId": 5302,
+    "cv_en": "CV: Jeannie Tirado",
+    "cv_kr": "CV: Yoon Eun-seo",
+    "cv_jp": "CV: Kaori Ishihara",
+    "manufacturer": "Tetra",
+    "squad": "Cafe Sweety",
+    "squadId": 2,
+    "class": "Supporter",
+    "burst": "1",
+    "rarity": "SSR",
+    "skins": [],
+    "weapon": "SR",
+    "burstGen": "2.65%",
+    "maxAmmo": 6,
+    "damage": "65.95%",
+    "chargeTime": 1,
+    "chargeDamage": "250%",
+    "reloadTime": 1.5,
+    "element": "Iron",
+    "skills": [
+      {
+        "id": 21421,
+        "name": "... I want to sleep.",
+        "description": "■ Activates after landing {description_value_01} normal attack(s). Affects the target(s). \r\n<color=#00AEFF>DEF ▼ {description_value_02}% for {description_value_03} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "4",
+            "description_value_02": "9.35",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "4",
+            "description_value_02": "10.08",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "4",
+            "description_value_02": "10.8",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "4",
+            "description_value_02": "11.52",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "4",
+            "description_value_02": "12.24",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "4",
+            "description_value_02": "12.96",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "4",
+            "description_value_02": "13.68",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "4",
+            "description_value_02": "14.4",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "4",
+            "description_value_02": "15.12",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "4",
+            "description_value_02": "15.84",
+            "description_value_03": "10"
+          }
+        ]
+      },
+      {
+        "id": 21422,
+        "name": "… Ah",
+        "description": "■ Activates when attacking with Full Charge. Affects all allies.\r\n<color=#00AEFF>Max HP ▲ {description_value_01}% for {description_value_02} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "3.6",
+            "description_value_02": "4"
+          },
+          {
+            "description_value_01": "3.88",
+            "description_value_02": "4"
+          },
+          {
+            "description_value_01": "4.15",
+            "description_value_02": "4"
+          },
+          {
+            "description_value_01": "4.43",
+            "description_value_02": "4"
+          },
+          {
+            "description_value_01": "4.71",
+            "description_value_02": "4"
+          },
+          {
+            "description_value_01": "4.98",
+            "description_value_02": "4"
+          },
+          {
+            "description_value_01": "5.26",
+            "description_value_02": "4"
+          },
+          {
+            "description_value_01": "5.54",
+            "description_value_02": "4"
+          },
+          {
+            "description_value_01": "5.82",
+            "description_value_02": "4"
+          },
+          {
+            "description_value_01": "6.09",
+            "description_value_02": "4"
+          }
+        ]
+      },
+      {
+        "id": 11423,
+        "name": "... Vexation",
+        "description": "■ Affects {description_value_01} enemy unit(s) with the highest DEF. \r\n<color=#00AEFF>Deals {description_value_02}% of ATK as damage.\r\nDEF ▼ {description_value_03}% for {description_value_04} sec.</color>\r\n■ Affects all allies. <color=#00AEFF>Max HP ▲ {description_value_05}% for {description_value_06} sec.</color>",
+        "cooldown": 20,
+        "levels": [
+          {
+            "description_value_01": "10",
+            "description_value_02": "60.07",
+            "description_value_03": "5.83",
+            "description_value_04": "10",
+            "description_value_05": "17.88",
+            "description_value_06": "4"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "64.69",
+            "description_value_03": "6.27",
+            "description_value_04": "10",
+            "description_value_05": "19.25",
+            "description_value_06": "4"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "69.31",
+            "description_value_03": "6.72",
+            "description_value_04": "10",
+            "description_value_05": "20.63",
+            "description_value_06": "4"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "73.93",
+            "description_value_03": "7.17",
+            "description_value_04": "10",
+            "description_value_05": "22",
+            "description_value_06": "4"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "78.56",
+            "description_value_03": "7.62",
+            "description_value_04": "10",
+            "description_value_05": "23.38",
+            "description_value_06": "4"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "83.18",
+            "description_value_03": "8.07",
+            "description_value_04": "10",
+            "description_value_05": "24.76",
+            "description_value_06": "4"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "87.8",
+            "description_value_03": "8.52",
+            "description_value_04": "10",
+            "description_value_05": "26.13",
+            "description_value_06": "4"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "92.42",
+            "description_value_03": "8.97",
+            "description_value_04": "10",
+            "description_value_05": "27.51",
+            "description_value_06": "4"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "97.04",
+            "description_value_03": "9.41",
+            "description_value_04": "10",
+            "description_value_05": "28.88",
+            "description_value_06": "4"
+          },
+          {
+            "description_value_01": "10",
+            "description_value_02": "101.66",
+            "description_value_03": "9.86",
+            "description_value_04": "10",
+            "description_value_05": "30.26",
+            "description_value_06": "4"
+          }
+        ]
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "641cc6919c3ead87ea69a976",
+    "id": "82",
+    "visible": true,
+    "name": "Liter",
+    "url": "liter",
+    "img": "si_c082_00_s",
+    "imgBig": "c082_00",
+    "description": "The leader of Mighty Tools. Contrary to her appearance, she has already lived a long life. At present, no other Nikke can surpass her when it comes to construction.",
+    "statTableId": 5303,
+    "cv_en": "CV: Lisa Reimold",
+    "cv_kr": "CV: Choi Jeong-yoon",
+    "cv_jp": "CV: Yuka Iguchi",
+    "manufacturer": "Missilis",
+    "squad": "Mighty Tools",
+    "squadId": 9,
+    "class": "Supporter",
+    "burst": "1",
+    "rarity": "SSR",
+    "skins": [],
+    "weapon": "SMG",
+    "burstGen": "0.1%",
+    "maxAmmo": 120,
+    "damage": "8.73%",
+    "chargeTime": 0,
+    "chargeDamage": "100%",
+    "reloadTime": 1.5,
+    "element": "Iron",
+    "skills": [
+      {
+        "id": 20821,
+        "name": "Liter Boost",
+        "description": "■ Activates when entering Full Burst. Affects all allies.\r\n<color=#00AEFF>Effect changes according to the activation time(s). Previous effects trigger repeatedly：\r\nOnce: Cooldown of Burst Skill ▼ {description_value_01} sec.\r\nTwice: Cooldown of Burst Skill ▼ {description_value_02} sec.\r\nThree times: Cooldown of Burst Skill ▼ {description_value_03} sec.</color>\r\n■ Activates when using Burst Skill. Affects all allies.\r\n<color=#00AEFF>Effect changes according to the activation time(s). Previous effects trigger repeatedly：\r\nOnce: Max Ammunition Capacity ▲ {description_value_04}% for {description_value_05} sec.\r\nTwice: Critical Damage ▲ {description_value_06}% for {description_value_07} sec.\r\nThree times: ATK ▲ {description_value_08}% for {description_value_09} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "2.34",
+            "description_value_02": "2.7",
+            "description_value_03": "3.17",
+            "description_value_04": "7.05",
+            "description_value_05": "5",
+            "description_value_06": "3.36",
+            "description_value_07": "5",
+            "description_value_08": "5.05",
+            "description_value_09": "5"
+          },
+          {
+            "description_value_01": "2.34",
+            "description_value_02": "2.7",
+            "description_value_03": "3.17",
+            "description_value_04": "11.29",
+            "description_value_05": "5",
+            "description_value_06": "4.37",
+            "description_value_07": "5",
+            "description_value_08": "6.09",
+            "description_value_09": "5"
+          },
+          {
+            "description_value_01": "2.34",
+            "description_value_02": "2.7",
+            "description_value_03": "3.17",
+            "description_value_04": "15.52",
+            "description_value_05": "5",
+            "description_value_06": "5.38",
+            "description_value_07": "5",
+            "description_value_08": "7.13",
+            "description_value_09": "5"
+          },
+          {
+            "description_value_01": "2.34",
+            "description_value_02": "2.7",
+            "description_value_03": "3.17",
+            "description_value_04": "19.76",
+            "description_value_05": "5",
+            "description_value_06": "6.39",
+            "description_value_07": "5",
+            "description_value_08": "8.17",
+            "description_value_09": "5"
+          },
+          {
+            "description_value_01": "2.34",
+            "description_value_02": "2.7",
+            "description_value_03": "3.17",
+            "description_value_04": "23.99",
+            "description_value_05": "5",
+            "description_value_06": "7.4",
+            "description_value_07": "5",
+            "description_value_08": "9.21",
+            "description_value_09": "5"
+          },
+          {
+            "description_value_01": "2.34",
+            "description_value_02": "2.7",
+            "description_value_03": "3.17",
+            "description_value_04": "28.23",
+            "description_value_05": "5",
+            "description_value_06": "8.41",
+            "description_value_07": "5",
+            "description_value_08": "10.25",
+            "description_value_09": "5"
+          },
+          {
+            "description_value_01": "2.34",
+            "description_value_02": "2.7",
+            "description_value_03": "3.17",
+            "description_value_04": "32.46",
+            "description_value_05": "5",
+            "description_value_06": "9.42",
+            "description_value_07": "5",
+            "description_value_08": "11.29",
+            "description_value_09": "5"
+          },
+          {
+            "description_value_01": "2.34",
+            "description_value_02": "2.7",
+            "description_value_03": "3.17",
+            "description_value_04": "36.7",
+            "description_value_05": "5",
+            "description_value_06": "10.44",
+            "description_value_07": "5",
+            "description_value_08": "12.33",
+            "description_value_09": "5"
+          },
+          {
+            "description_value_01": "2.34",
+            "description_value_02": "2.7",
+            "description_value_03": "3.17",
+            "description_value_04": "40.93",
+            "description_value_05": "5",
+            "description_value_06": "11.45",
+            "description_value_07": "5",
+            "description_value_08": "13.37",
+            "description_value_09": "5"
+          },
+          {
+            "description_value_01": "2.34",
+            "description_value_02": "2.7",
+            "description_value_03": "3.17",
+            "description_value_04": "45.17",
+            "description_value_05": "5",
+            "description_value_06": "12.46",
+            "description_value_07": "5",
+            "description_value_08": "14.42",
+            "description_value_09": "5"
+          }
+        ]
+      },
+      {
+        "id": 10822,
+        "name": "Bolt Boost",
+        "description": "■ Affects {description_value_01} ally unit(s) with the lowest HP of cover.\r\n<color=#00AEFF>Cover's HP recovers by {description_value_02}%.</color>",
+        "cooldown": 15,
+        "levels": [
+          {
+            "description_value_01": "2",
+            "description_value_02": "28.87"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "31.5"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "34.12"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "36.75"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "39.37"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "42"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "44.62"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "47.25"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "49.87"
+          },
+          {
+            "description_value_01": "2",
+            "description_value_02": "52.5"
+          }
+        ]
+      },
+      {
+        "id": 10823,
+        "name": "Double Boost",
+        "description": "■ Affects all allies.\r\n<color=#00AEFF>ATK ▲ {description_value_01}% for {description_value_02} sec.</color>",
+        "cooldown": 20,
+        "levels": [
+          {
+            "description_value_01": "36.3",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "39.6",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "42.9",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "46.2",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "49.5",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "52.8",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "56.1",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "59.4",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "62.7",
+            "description_value_02": "5"
+          },
+          {
+            "description_value_01": "66",
+            "description_value_02": "5"
+          }
+        ]
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "641cc6919c3ead87ea69a977",
+    "id": "220",
+    "visible": true,
+    "name": "Snow White",
+    "url": "snow-white",
+    "img": "si_c220_00_s",
+    "imgBig": "c220_00",
+    "description": "A puritanical pilgrim who wanders the surface in an effort to protect humanity. As a member of Pioneer, her days are spent wiping out Raptures with extreme prejudice.",
+    "statTableId": 5101,
+    "cv_en": "CV: Laura Stahl",
+    "cv_kr": "CV: So Yeon",
+    "cv_jp": "CV: M・A・O",
+    "manufacturer": "Pilgrim",
+    "squad": "Pioneer",
+    "squadId": 10,
+    "class": "Attacker",
+    "burst": "3",
+    "rarity": "SSR",
+    "skins": [
+      "acc"
+    ],
+    "weapon": "AR",
+    "burstGen": "0.25%",
+    "maxAmmo": 60,
+    "damage": "14.71%",
+    "chargeTime": 0,
+    "chargeDamage": "100%",
+    "reloadTime": 1.5,
+    "element": "Iron",
+    "skills": [
+      {
+        "id": 22201,
+        "name": "Determination",
+        "description": "■ Activates when normal attack hits {description_value_01} time(s). Affects the target(s).\r\n<color=#00AEFF>Deals {description_value_02}% of ATK as additional damage.</color> \r\n■ Activates when normal attack hits {description_value_01} time(s). Affects self.\r\n<color=#00AEFF>ATK ▲ {description_value_03}% for {description_value_04} sec.</color>",
+        "cooldown": "",
+        "levels": [
+          {
+            "description_value_01": "30",
+            "description_value_02": "51.75",
+            "description_value_03": "5.17",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "30",
+            "description_value_02": "55.2",
+            "description_value_03": "5.52",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "30",
+            "description_value_02": "58.65",
+            "description_value_03": "5.86",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "30",
+            "description_value_02": "62.1",
+            "description_value_03": "6.21",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "30",
+            "description_value_02": "65.55",
+            "description_value_03": "6.55",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "30",
+            "description_value_02": "69",
+            "description_value_03": "6.9",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "30",
+            "description_value_02": "72.45",
+            "description_value_03": "7.24",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "30",
+            "description_value_02": "75.9",
+            "description_value_03": "7.59",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "30",
+            "description_value_02": "79.35",
+            "description_value_03": "7.93",
+            "description_value_04": "5"
+          },
+          {
+            "description_value_01": "30",
+            "description_value_02": "82.8",
+            "description_value_03": "8.28",
+            "description_value_04": "5"
+          }
+        ]
+      },
+      {
+        "id": 12202,
+        "name": "Seven Dwarves: V&VI",
+        "description": "■ Affects enemies within the attack range.\r\n<color=#00AEFF>[Target] Deals {description_value_01}% of ATK as damage.</color> \r\n■ Activates when attacking during Full Burst Time.\r\n<color=#00AEFF>[Self] Critical Rate ▲ {description_value_02}% for {description_value_03} sec.</color>",
+        "cooldown": 15,
+        "levels": [
+          {
+            "description_value_01": "90.46",
+            "description_value_02": "16.31",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "96.49",
+            "description_value_02": "17.4",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "102.52",
+            "description_value_02": "18.48",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "108.55",
+            "description_value_02": "19.57",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "114.58",
+            "description_value_02": "20.66",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "120.61",
+            "description_value_02": "21.75",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "126.64",
+            "description_value_02": "22.83",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "132.67",
+            "description_value_02": "23.92",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "138.7",
+            "description_value_02": "25.01",
+            "description_value_03": "10"
+          },
+          {
+            "description_value_01": "144.73",
+            "description_value_02": "26.1",
+            "description_value_03": "10"
+          }
+        ]
+      },
+      {
+        "id": 12203,
+        "name": "Seven Dwarves: I",
+        "description": "■ Affects self. \r\n<color=#00AEFF>Change the Weapon in use: \r\nCharge Time: 5 sec\r\nDamage: {description_value_01}% of ATK \r\nFull Charge Damage: 1000% damage \r\nMax Ammunition Capacity: {description_value_02} round(s) \r\nAdditional Effect: Pierce</color>",
+        "cooldown": 40,
+        "levels": [
+          {
+            "description_value_01": "124.87",
+            "description_value_02": "1",
+            "description_value_03": "1"
+          },
+          {
+            "description_value_01": "166.5",
+            "description_value_02": "1",
+            "description_value_03": "1"
+          },
+          {
+            "description_value_01": "208.12",
+            "description_value_02": "1",
+            "description_value_03": "1"
+          },
+          {
+            "description_value_01": "249.75",
+            "description_value_02": "1",
+            "description_value_03": "1"
+          },
+          {
+            "description_value_01": "291.37",
+            "description_value_02": "1",
+            "description_value_03": "1"
+          },
+          {
+            "description_value_01": "333",
+            "description_value_02": "1",
+            "description_value_03": "1"
+          },
+          {
+            "description_value_01": "374.62",
+            "description_value_02": "1",
+            "description_value_03": "1"
+          },
+          {
+            "description_value_01": "416.25",
+            "description_value_02": "1",
+            "description_value_03": "1"
+          },
+          {
+            "description_value_01": "457.87",
+            "description_value_02": "1",
+            "description_value_03": "1"
+          },
+          {
+            "description_value_01": "499.5",
+            "description_value_02": "1",
+            "description_value_03": "1"
+          }
+        ]
+      }
+    ],
+    "__v": 0
+  }
+]

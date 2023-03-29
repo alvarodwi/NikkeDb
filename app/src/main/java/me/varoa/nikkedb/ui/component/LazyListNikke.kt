@@ -7,6 +7,8 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import me.varoa.nikkedb.core.domain.model.Nikke
 
@@ -29,7 +31,9 @@ fun LazyListNikke(
       contentPadding = PaddingValues(16.dp),
       horizontalArrangement = Arrangement.spacedBy(16.dp),
       verticalArrangement = Arrangement.spacedBy(16.dp),
-      modifier = modifier
+      modifier = modifier.semantics{
+        contentDescription = "List Nikke"
+      }
     ) {
       items(data) { data ->
         NikkeItem(

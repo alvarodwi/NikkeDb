@@ -18,7 +18,7 @@ android {
     versionCode = 1
     versionName = "1.0"
 
-    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    testInstrumentationRunner = "me.varoa.nikkedb.CustomTestRunner"
   }
 
   buildTypes {
@@ -53,8 +53,14 @@ android {
     kotlinCompilerExtensionVersion = "1.4.4"
   }
   packagingOptions {
-    resources.excludes.add("/META-INF/AL2.0")
-    resources.excludes.add("/META-INF/LGPL2.1")
+    resources.excludes.add("META-INF/*")
+  }
+  testOptions{
+    packagingOptions {
+      jniLibs {
+        useLegacyPackaging = true
+      }
+    }
   }
 }
 
@@ -124,7 +130,7 @@ dependencies {
   // idling resource
   implementation("androidx.test.espresso:espresso-idling-resource:3.5.1")
 
-  // ui testing
+  // integration testing
   androidTestImplementation("androidx.test.ext:junit:1.1.5")
   androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
   androidTestImplementation("androidx.compose.ui:ui-test-junit4")

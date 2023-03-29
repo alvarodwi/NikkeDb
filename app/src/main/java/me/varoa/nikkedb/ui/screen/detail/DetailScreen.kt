@@ -21,8 +21,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.ContentScale.Companion
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -119,7 +120,7 @@ fun DetailContent(
 
     Image(
       painter = rememberAsyncImagePainter(data.generateFullImageUrl()),
-      contentScale = ContentScale.Crop,
+      contentScale = ContentScale.FillHeight,
       alignment = Alignment.Center,
       contentDescription = null,
       modifier = Modifier.fillMaxSize()
@@ -129,7 +130,9 @@ fun DetailContent(
           start.linkTo(parent.start)
           end.linkTo(parent.end)
         }
-        .padding(16.dp)
+        .semantics {
+          contentDescription = "Nikke Full Image"
+        }
     )
     Text(
       text = data.rarity,
@@ -149,6 +152,9 @@ fun DetailContent(
       modifier = Modifier.constrainAs(card) {
         bottom.linkTo(parent.bottom)
       }.wrapContentSize()
+        .semantics {
+          contentDescription = "Nikke Info Card"
+        }
     ) {
       Column(
         modifier = Modifier.padding(16.dp)

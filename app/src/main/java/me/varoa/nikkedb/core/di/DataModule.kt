@@ -15,7 +15,7 @@ import me.varoa.nikkedb.BuildConfig
 import me.varoa.nikkedb.core.data.local.AppDatabase
 import me.varoa.nikkedb.core.data.remote.NoConnectionInterceptor
 import me.varoa.nikkedb.core.data.remote.api.NikkeApiService
-import me.varoa.nikkedb.utils.Constants
+import me.varoa.nikkedb.core.data.remote.api.ApiConfig
 import me.varoa.nikkedb.core.data.prefs.DataStoreManager
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
@@ -80,7 +80,7 @@ class DataModule {
     @Provides
     fun provideNikkeApiService(client: OkHttpClient, factory: Converter.Factory): NikkeApiService {
         val retrofit = Retrofit.Builder()
-            .baseUrl(Constants.BASE_URL)
+            .baseUrl(ApiConfig.BASE_URL)
             .client(client)
             .addConverterFactory(factory)
             .build()

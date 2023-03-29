@@ -13,9 +13,9 @@ interface FavoriteDao {
     @Query("SELECT * FROM favorites")
     fun getAll(): Flow<List<FavoriteEntity>>
 
-    @Query("SELECT EXISTS(SELECT * FROM favorites WHERE name = :name)")
-    fun isItemWithNameExists(
-        name: String
+    @Query("SELECT EXISTS(SELECT * FROM favorites WHERE url = :url)")
+    fun isItemWithUrlExists(
+        url: String
     ): Flow<Int>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

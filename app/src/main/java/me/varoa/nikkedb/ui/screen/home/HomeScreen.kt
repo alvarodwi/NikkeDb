@@ -17,8 +17,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import me.varoa.nikkedb.R
 import me.varoa.nikkedb.core.domain.model.Nikke
@@ -44,9 +48,15 @@ fun HomeScreen(
     modifier = modifier,
     bottomBar = {
       BottomAppBar(
+        modifier = Modifier.semantics {
+          contentDescription = "Bottom Appbar"
+        },
         actions = {
           IconButton(
-            onClick = { navigateToFavorite() }
+            onClick = { navigateToFavorite() },
+            modifier = Modifier.semantics {
+              contentDescription = "Menu Action Favorite"
+            }
           ) {
             Icon(
               painter = painterResource(R.drawable.ic_heart),
@@ -69,7 +79,10 @@ fun HomeScreen(
             }
           }
           IconButton(
-            onClick = { navigateToAbout() }
+            onClick = { navigateToAbout() },
+            modifier = Modifier.semantics {
+              contentDescription = "Menu Action About"
+            }
           ) {
             Icon(
               painter = painterResource(R.drawable.ic_info),
@@ -112,7 +125,7 @@ fun HomeScreen(
   }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Composable
 fun HomeContent(
   modifier: Modifier = Modifier,
@@ -122,18 +135,24 @@ fun HomeContent(
   onSearch: (String) -> Unit,
   navigateToDetail: (String) -> Unit,
 ) {
+  val keyboardController = LocalSoftwareKeyboardController.current
+
   Box(
     modifier = modifier.fillMaxSize()
   ) {
     Column {
       SearchBar(
-        modifier = Modifier.fillMaxWidth().padding(16.dp),
+        modifier = Modifier.fillMaxWidth().padding(16.dp)
+          .semantics {
+            contentDescription = "Search Bar"
+          },
         query = query,
         active = false,
         onActiveChange = { },
         onQueryChange = { onQueryChange(it) },
         onSearch = {
           onSearch(it)
+          keyboardController?.hide()
         },
         placeholder = { Text("Search NIKKE by name") },
         leadingIcon = {
@@ -157,6 +176,7 @@ fun HomeContent(
             }
           }
         }
+
       ) {}
       LazyListNikke(
         data = data,

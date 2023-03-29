@@ -24,7 +24,7 @@ class DetailViewModel @Inject constructor(
   private val favorite: FavoriteRepository,
   state: SavedStateHandle
 ) : ViewModel() {
-  private val name: String = state.get<String>(Screen.Detail.args0) ?: ""
+  private val url: String = state.get<String>(Screen.Detail.args0) ?: ""
 
   private val _uiState: MutableStateFlow<UiState<Nikke>> = MutableStateFlow(Loading)
   val uiState get() = _uiState.asStateFlow()
@@ -39,13 +39,13 @@ class DetailViewModel @Inject constructor(
   }
 
   fun getNikkeDetail() {
+    checkInFavorite()
     viewModelScope.launch {
-      nikke.getNikke(name)
+      nikke.getNikke(url)
         .catch { _uiState.emit(UiState.Error(it.message.toString())) }
         .collectLatest { result ->
           if (result.isSuccess) {
             data = result.getOrThrow()
-            checkInFavorite()
             _uiState.emit(UiState.Success(data))
           } else if (result.isFailure) {
             _uiState.emit(UiState.Error(result.exceptionOrNull()?.message.toString()))
@@ -56,7 +56,7 @@ class DetailViewModel @Inject constructor(
 
   private fun checkInFavorite() {
     viewModelScope.launch {
-      favorite.isNikkeInFavorites(data.name).collect {
+      favorite.isNikkeInFavorites(url).collect {
         _isFavorite.emit(it == 1)
       }
     }

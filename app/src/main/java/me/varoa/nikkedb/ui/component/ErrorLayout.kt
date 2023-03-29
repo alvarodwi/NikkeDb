@@ -13,6 +13,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -29,6 +31,9 @@ fun ErrorLayout(
 ) {
   Box(
     modifier = modifier.fillMaxSize()
+      .semantics {
+        contentDescription = "Error Layout"
+      }
   ) {
     Column(
       horizontalAlignment = Alignment.CenterHorizontally,
@@ -46,11 +51,18 @@ fun ErrorLayout(
         style = MaterialTheme.typography.bodyMedium,
         color = MaterialTheme.colorScheme.onBackground,
         textAlign = TextAlign.Center,
+        modifier = Modifier.semantics {
+          contentDescription = "Error Message"
+        }
       )
       if(shouldShowRetry){
         Button(
           onClick = onRetry,
           contentPadding = ButtonDefaults.TextButtonContentPadding,
+          modifier = Modifier.padding(top = 12.dp)
+            .semantics {
+              contentDescription = "Retry Button"
+            }
         ) {
           Text("Retry")
         }

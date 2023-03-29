@@ -1,0 +1,208 @@
+{
+  "_id": "641cc6919c3ead87ea69a96e",
+  "id": "102",
+  "visible": true,
+  "name": "Maxwell",
+  "url": "maxwell",
+  "img": "si_c102_00_s",
+  "imgBig": "c102_00",
+  "description": "A genius researcher who loves nothing more than machines and knowledge. As the brain of Matis, she is both perceptive, whip-smart, and capable of producing weapons in a flash.",
+  "statTableId": 5102,
+  "cv_en": "CV: Amber Lee Connors",
+  "cv_kr": "CV: Kim Yool",
+  "cv_jp": "CV: Sora Amamiya",
+  "manufacturer": "Missilis",
+  "squad": "Matis",
+  "squadId": 1,
+  "class": "Attacker",
+  "burst": "3",
+  "rarity": "SSR",
+  "skins": [
+    "acc"
+  ],
+  "weapon": "SR",
+  "burstGen": "2.8%",
+  "maxAmmo": 6,
+  "damage": "69.04%",
+  "chargeTime": 1,
+  "chargeDamage": "250%",
+  "reloadTime": 2,
+  "element": "Iron",
+  "skills": [
+    {
+      "id": 21021,
+      "name": "Straight Shot",
+      "description": "■ Activates when entering Full Burst. Affects 2 allies with the highest ATK.\r\n<color=#00AEFF>Charge Speed ▲ {description_value_01}% for {description_value_02} sec. \r\nATK ▲ {description_value_03}% for {description_value_04} sec.</color>",
+      "cooldown": "",
+      "levels": [
+        {
+          "description_value_01": "2.65",
+          "description_value_02": "10",
+          "description_value_03": "25.46",
+          "description_value_04": "10"
+        },
+        {
+          "description_value_01": "2.85",
+          "description_value_02": "10",
+          "description_value_03": "27.42",
+          "description_value_04": "10"
+        },
+        {
+          "description_value_01": "3.06",
+          "description_value_02": "10",
+          "description_value_03": "29.38",
+          "description_value_04": "10"
+        },
+        {
+          "description_value_01": "3.26",
+          "description_value_02": "10",
+          "description_value_03": "31.34",
+          "description_value_04": "10"
+        },
+        {
+          "description_value_01": "3.46",
+          "description_value_02": "10",
+          "description_value_03": "33.3",
+          "description_value_04": "10"
+        },
+        {
+          "description_value_01": "3.67",
+          "description_value_02": "10",
+          "description_value_03": "35.26",
+          "description_value_04": "10"
+        },
+        {
+          "description_value_01": "3.87",
+          "description_value_02": "10",
+          "description_value_03": "37.22",
+          "description_value_04": "10"
+        },
+        {
+          "description_value_01": "4.08",
+          "description_value_02": "10",
+          "description_value_03": "39.18",
+          "description_value_04": "10"
+        },
+        {
+          "description_value_01": "4.28",
+          "description_value_02": "10",
+          "description_value_03": "41.14",
+          "description_value_04": "10"
+        },
+        {
+          "description_value_01": "4.48",
+          "description_value_02": "10",
+          "description_value_03": "43.1",
+          "description_value_04": "10"
+        }
+      ]
+    },
+    {
+      "id": 21022,
+      "name": "Spark Shot",
+      "description": "■ Activates when there are above {description_value_01} enemy unit(s), excluding Nikkes. Affects self.\r\n<color=#00AEFF>Critical Rate ▲ {description_value_02}%.\r\nCritical Damage ▲ {description_value_03}%.</color>",
+      "cooldown": "",
+      "levels": [
+        {
+          "description_value_01": "5",
+          "description_value_02": "2.85",
+          "description_value_03": "8.22"
+        },
+        {
+          "description_value_01": "5",
+          "description_value_02": "3.07",
+          "description_value_03": "8.85"
+        },
+        {
+          "description_value_01": "5",
+          "description_value_02": "3.29",
+          "description_value_03": "9.48"
+        },
+        {
+          "description_value_01": "5",
+          "description_value_02": "3.51",
+          "description_value_03": "10.12"
+        },
+        {
+          "description_value_01": "5",
+          "description_value_02": "3.73",
+          "description_value_03": "10.75"
+        },
+        {
+          "description_value_01": "5",
+          "description_value_02": "3.95",
+          "description_value_03": "11.38"
+        },
+        {
+          "description_value_01": "5",
+          "description_value_02": "4.17",
+          "description_value_03": "12.01"
+        },
+        {
+          "description_value_01": "5",
+          "description_value_02": "4.39",
+          "description_value_03": "12.65"
+        },
+        {
+          "description_value_01": "5",
+          "description_value_02": "4.61",
+          "description_value_03": "13.28"
+        },
+        {
+          "description_value_01": "5",
+          "description_value_02": "4.83",
+          "description_value_03": "13.91"
+        }
+      ]
+    },
+    {
+      "id": 11023,
+      "name": "Pierce Shot",
+      "description": "■ Affects self. \r\n<color=#00AEFF>Change the Weapon in use: \r\nCharge Time: 2 sec\r\nDamage: {description_value_01}% of ATK \r\nFull Charge Damage: 300% damage \r\nMax Ammunition Capacity: {description_value_02} round(s) \r\nAdditional Effect: Pierce</color>",
+      "cooldown": 40,
+      "levels": [
+        {
+          "description_value_01": "144.85",
+          "description_value_02": "1"
+        },
+        {
+          "description_value_01": "219.14",
+          "description_value_02": "1"
+        },
+        {
+          "description_value_01": "293.42",
+          "description_value_02": "1"
+        },
+        {
+          "description_value_01": "367.71",
+          "description_value_02": "1"
+        },
+        {
+          "description_value_01": "442",
+          "description_value_02": "1"
+        },
+        {
+          "description_value_01": "516.28",
+          "description_value_02": "1"
+        },
+        {
+          "description_value_01": "590.57",
+          "description_value_02": "1"
+        },
+        {
+          "description_value_01": "664.85",
+          "description_value_02": "1"
+        },
+        {
+          "description_value_01": "739.14",
+          "description_value_02": "1"
+        },
+        {
+          "description_value_01": "813.42",
+          "description_value_02": "1"
+        }
+      ]
+    }
+  ],
+  "__v": 0
+}

@@ -20,6 +20,6 @@ class FavoriteRepositoryImpl @Inject constructor(
     override suspend fun removeFromFavorite(nikke: Nikke) =
         dao.delete(nikke.toEntity())
 
-    override fun isNikkeInFavorites(name: String): Flow<Int> =
-        dao.isItemWithNameExists(name)
+    override fun isNikkeInFavorites(url: String): Flow<Int> =
+        dao.isItemWithUrlExists(url)
 }
