@@ -21,7 +21,6 @@ import me.varoa.nikkedb.ui.component.LoadingLayout
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FavoriteScreen(
-    modifier: Modifier = Modifier,
     viewModel: FavoriteViewModel,
     navigateToDetail: (String) -> Unit,
     navigateBack: () -> Unit

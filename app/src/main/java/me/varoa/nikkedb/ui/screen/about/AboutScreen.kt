@@ -34,7 +34,6 @@ import me.varoa.nikkedb.ui.theme.AppTheme
 @Composable
 fun AboutScreen(
     navigateBack: () -> Unit = {},
-    lazyListState: LazyListState = rememberLazyListState()
 ) {
     Scaffold(
         topBar = {

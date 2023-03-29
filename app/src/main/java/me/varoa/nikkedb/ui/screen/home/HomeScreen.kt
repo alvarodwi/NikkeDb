@@ -34,7 +34,6 @@ import me.varoa.nikkedb.ui.component.LoadingLayout
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-    modifier: Modifier = Modifier,
     viewModel: HomeViewModel,
     navigateToDetail: (String) -> Unit,
     navigateToFavorite: () -> Unit,
@@ -45,7 +44,6 @@ fun HomeScreen(
     val query by viewModel.query.collectAsState("")
 
     Scaffold(
-        modifier = modifier,
         bottomBar = {
             BottomAppBar(
                 modifier = Modifier.semantics {
